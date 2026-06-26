@@ -72,6 +72,8 @@ export default function App() {
   // Application feedback Toast
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
+  const footerLogoSrc = `${import.meta.env.BASE_URL}shieldguard-logo.png`;
+
   // Persist states automatically when changed
   useEffect(() => {
     setStoredData('policies', policies);
@@ -307,9 +309,14 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <div className="flex flex-col sm:flex-row items-center justify-between border-b border-slate-800 pb-6 gap-4">
             {/* Brand */}
-            <div className="flex items-center space-x-2">
-               <Shield className="w-5 h-5 text-slate-600 fill-slate-700" />
-              <span className="font-bold text-sm tracking-widest text-white uppercase block font-sans">ShieldGuard Insurance</span>
+            <div className="flex items-center space-x-2 bg-transparent">
+              <img
+                src={footerLogoSrc}
+                alt="ShieldGuard logo"
+                width={168}
+                height={48}
+                className="object-contain"
+              />
             </div>
 
             {/* Links */}
@@ -323,8 +330,7 @@ export default function App() {
 
           {/* Legal notes */}
           <div className="flex flex-col sm:flex-row items-center justify-between text-slate-500 gap-2">
-            <p>© 2026 ShieldGuard Indemnity Company. All rights reserved.</p>
-            <p className="text-[10px] font-mono">APP-VERSION: 3.1.2 • HOSTED SECURELY</p>
+            <p>© 2026 @valuemomentum. All rights reserved.</p>            
           </div>
         </div>
       </footer>
