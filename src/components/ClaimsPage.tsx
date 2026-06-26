@@ -130,7 +130,7 @@ export default function ClaimsPage({
       {/* 1. Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between border-b border-slate-200 pb-4 gap-4">
         <div>
-          <span className="text-xs font-bold tracking-wider text-[#004f8f] block uppercase font-sans">ShieldGuard Claims Center</span>
+          <span className="text-xs font-bold tracking-wider text-[#0f9d58] block uppercase font-sans">ShieldGuard Claims Center</span>
           <h1 className="text-2xl sm:text-3xl font-sans font-medium text-slate-900 mt-1">Claims Incident Hub</h1>
           <p className="text-xs sm:text-sm text-slate-500 font-sans">Report accident incidents, track active adjuster reviews, and upload damage photos</p>
         </div>
@@ -153,7 +153,7 @@ export default function ClaimsPage({
           </p>
           <button
             onClick={onFileClaimClick}
-            className="px-4 py-2 bg-[#004f8f] text-white text-xs font-bold rounded-xl hover:bg-[#003d70] transition-colors"
+            className="px-4 py-2 bg-[#0f9d58] text-white text-xs font-bold rounded-xl hover:bg-[#0b8043] transition-colors"
           >
             File a Claim Incident
           </button>
@@ -176,7 +176,7 @@ export default function ClaimsPage({
                     onClick={() => setSelectedClaimId(claim.id)}
                     className={`w-full p-4 rounded-2xl border text-left flex flex-col justify-between transition-all ${
                       isActive 
-                        ? 'bg-white border-[#004f8f] ring-2 ring-[#004f8f]/10 shadow-xs' 
+                        ? 'bg-white border-[#0f9d58] ring-2 ring-[#0f9d58]/10 shadow-xs' 
                         : 'bg-white hover:bg-slate-50 border-slate-200'
                     }`}
                   >
@@ -198,7 +198,7 @@ export default function ClaimsPage({
 
                     <div className="flex items-center justify-between border-t border-slate-100 pt-2.5 mt-2.5 w-full text-[10px]">
                       <span className="text-slate-400 font-mono">ID: {claim.id}</span>
-                      <span className="text-[#004f8f] font-bold flex items-center">
+                      <span className="text-[#0f9d58] font-bold flex items-center">
                         View timeline <ChevronRight className="w-3 h-3 ml-0.5" />
                       </span>
                     </div>
@@ -216,7 +216,7 @@ export default function ClaimsPage({
                 {/* Section Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 pb-4 gap-2">
                   <div>
-                    <span className="text-xs uppercase font-bold tracking-widest text-[#004f8f]">Track Pipeline Status</span>
+                    <span className="text-xs uppercase font-bold tracking-widest text-[#0f9d58]">Track Pipeline Status</span>
                     <h3 className="font-bold text-base text-slate-900 mt-0.5">{activeClaim.policyTitle} claim</h3>
                   </div>
                   <div className="text-left sm:text-right">
@@ -261,9 +261,9 @@ export default function ClaimsPage({
                 </div>
 
                 {/* Claim Notes Block */}
-                <div className="p-4 bg-[#f0f6fa] border border-blue-100 rounded-xl space-y-2">
+                <div className="p-4 bg-[#e6f4ea] border border-slate-200 rounded-xl space-y-2">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-slate-800">
-                    <Clock className="w-4 h-4 text-[#004f8f]" />
+                    <Clock className="w-4 h-4 text-[#0f9d58]" />
                     <span>Latest Adjuster Correspondence</span>
                   </div>
                   <p className="text-xs text-slate-600 leading-relaxed font-sans">
@@ -280,7 +280,7 @@ export default function ClaimsPage({
                       <p className="text-[11px] text-slate-400">Attach damage invoices, crash photos, or police notes</p>
                     </div>
 
-                    <label className="px-3 py-1.5 bg-slate-50 border border-slate-200 hover:bg-slate-100 text-[#004f8f] font-bold text-xs rounded-lg transition-colors cursor-pointer flex items-center gap-1.5">
+                    <label className="px-3 py-1.5 bg-slate-50 border border-slate-200 hover:bg-slate-100 text-[#0f9d58] font-bold text-xs rounded-lg transition-colors cursor-pointer flex items-center gap-1.5">
                       <Upload className="w-3.5 h-3.5" />
                       <span>Upload files</span>
                       <input 
@@ -293,13 +293,13 @@ export default function ClaimsPage({
                   </div>
 
                   {uploadProgress !== null && (
-                    <div className="bg-blue-50 border border-blue-100 p-3 rounded-lg space-y-1.5">
+                    <div className="bg-slate-50 border border-slate-200 p-3 rounded-lg space-y-1.5">
                       <div className="flex justify-between text-[10px] text-slate-600 font-bold">
                         <span>Uploading files securely to ShieldGuard Vault...</span>
                         <span>{uploadProgress}%</span>
                       </div>
                       <div className="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                        <div className="bg-[#004f8f] h-full transition-all duration-300 upload-progress-bar" style={{ '--upload-progress': `${uploadProgress}%` } as React.CSSProperties}></div>
+                        <div className="bg-[#0f9d58] h-full transition-all duration-300 upload-progress-bar" style={{ '--upload-progress': `${uploadProgress}%` } as React.CSSProperties}></div>
                       </div>
                     </div>
                   )}
@@ -343,7 +343,7 @@ export default function ClaimsPage({
       {/* 3. Accident Out-of-pocket Estimator tool */}
       <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs max-w-3xl">
         <div className="flex items-center space-x-2 border-b border-slate-100 pb-3 mb-5">
-          <Calculator className="w-5 h-5 text-[#004f8f]" />
+          <Calculator className="w-5 h-5 text-[#0f9d58]" />
           <h3 className="font-sans font-bold text-base text-slate-900">Incident Cost & Out-of-Pocket Estimator</h3>
         </div>
 
@@ -378,8 +378,8 @@ export default function ClaimsPage({
             />
           </div>
 
-          <div className="bg-[#f0f6fa] border border-blue-100 rounded-xl p-3 flex flex-col justify-between h-[68px]">
-            <span className="text-[10px] font-bold text-[#004f8f] uppercase">Policy Deductible:</span>
+          <div className="bg-[#e6f4ea] border border-slate-200 rounded-xl p-3 flex flex-col justify-between h-[68px]">
+            <span className="text-[10px] font-bold text-[#0f9d58] uppercase">Policy Deductible:</span>
             <span className="text-sm font-black text-slate-800">${deductible}</span>
           </div>
         </div>
@@ -394,7 +394,7 @@ export default function ClaimsPage({
 
           <div className="space-y-1 border-t sm:border-t-0 sm:border-l border-slate-200 pt-3 sm:pt-0 sm:pl-4">
             <span className="text-xs text-slate-400 block">Covered & Disbursed by ShieldGuard:</span>
-            <span className="text-2xl font-black text-[#004f8f] block">${shieldGuardCoverage.toLocaleString()}</span>
+            <span className="text-2xl font-black text-[#0f9d58] block">${shieldGuardCoverage.toLocaleString()}</span>
             <p className="text-[10px] text-slate-400">ShieldGuard indemnifies everything above deductible limits.</p>
           </div>
         </div>

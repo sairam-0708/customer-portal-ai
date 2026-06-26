@@ -14,7 +14,7 @@ export default function AgentSection({ agent, onContactClick }: AgentSectionProp
       {/* Header */}
       <div className="flex items-center justify-between border-b border-slate-200 pb-2">
         <div>
-          <span className="text-xs font-bold tracking-wider text-blue-600 block uppercase font-sans">
+          <span className="text-xs font-bold tracking-wider text-slate-700 block uppercase font-sans">
             YOUR LOCAL AGENT
           </span>
           <h2 className="text-2xl font-sans font-medium text-slate-900 mt-0.5">
@@ -23,7 +23,7 @@ export default function AgentSection({ agent, onContactClick }: AgentSectionProp
         </div>
         <button 
           onClick={onContactClick}
-          className="text-blue-600 hover:text-blue-800 text-xs font-semibold flex items-center space-x-1 hover:underline"
+          className="text-slate-700 hover:text-slate-950 text-xs font-semibold flex items-center space-x-1 hover:underline"
           id="btn-agency-contact"
         >
           <span>Contact</span>
@@ -41,7 +41,7 @@ export default function AgentSection({ agent, onContactClick }: AgentSectionProp
       >
         {/* Agent Profile Block */}
         <div className="flex items-start space-x-4">
-          <div className="w-14 h-14 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-bold font-sans text-lg flex items-center justify-center shadow-2xs">
+          <div className="w-14 h-14 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-bold font-sans text-lg flex items-center justify-center shadow-2xs">
             MR
           </div>
           <div>
@@ -62,21 +62,21 @@ export default function AgentSection({ agent, onContactClick }: AgentSectionProp
           <div className="flex items-center space-x-3 text-slate-700">
             <Phone className="w-4 h-4 text-slate-400 shrink-0" />
             <span className="font-sans">
-              Office <a href={`tel:${agent.officePhone.replace(/\D/g, '')}`} className="hover:text-blue-600 font-medium">{agent.officePhone}</a>
+              Office <a href={`tel:${agent.officePhone.replace(/\D/g, '')}`} className="hover:text-slate-700 font-medium">{agent.officePhone}</a>
             </span>
           </div>
 
           <div className="flex items-center space-x-3 text-slate-700">
             <Smartphone className="w-4 h-4 text-slate-400 shrink-0" />
             <span className="font-sans">
-              Mobile <a href={`tel:${agent.mobilePhone.replace(/\D/g, '')}`} className="hover:text-blue-600 font-medium">{agent.mobilePhone}</a>
+              Mobile <a href={`tel:${agent.mobilePhone.replace(/\D/g, '')}`} className="hover:text-slate-700 font-medium">{agent.mobilePhone}</a>
             </span>
           </div>
 
           <div className="flex items-center space-x-3 text-slate-700">
             <Mail className="w-4 h-4 text-slate-400 shrink-0" />
             <span className="font-sans break-all">
-              Email <a href={`mailto:${agent.email}`} className="hover:text-blue-600 font-medium">{agent.email}</a>
+              Email <a href={`mailto:${agent.email}`} className="hover:text-slate-700 font-medium">{agent.email}</a>
             </span>
           </div>
 

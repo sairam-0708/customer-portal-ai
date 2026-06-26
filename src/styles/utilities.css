@@ -682,17 +682,17 @@
     --tw-border-style: dashed;
     border-style: dashed;
   }
-  .border-\[\#004f8f\] {
-    border-color: #004f8f;
+  .border-\[\#0f9d58\] {
+    border-color: #0f9d58;
   }
-  .border-\[\#004f8f\]\/10 {
-    border-color: color-mix(in oklab, #004f8f 10%, transparent);
+  .border-\[\#0f9d58\]\/10 {
+    border-color: color-mix(in oklab, #0f9d58 10%, transparent);
   }
-  .border-\[\#004f8f\]\/30 {
-    border-color: color-mix(in oklab, #004f8f 30%, transparent);
+  .border-\[\#0f9d58\]\/30 {
+    border-color: color-mix(in oklab, #0f9d58 30%, transparent);
   }
-  .border-\[\#bcd3e6\] {
-    border-color: #bcd3e6;
+  .border-\[\#b7dfc2\] {
+    border-color: #b7dfc2;
   }
   .border-amber-100 {
     border-color: var(--color-amber-100);
@@ -802,17 +802,17 @@
   .bg-\[\#1a202c\] {
     background-color: #1a202c;
   }
-  .bg-\[\#004f8f\] {
-    background-color: #004f8f;
+  .bg-\[\#0f9d58\] {
+    background-color: #0f9d58;
   }
-  .bg-\[\#004f8f\]\/5 {
-    background-color: color-mix(in oklab, #004f8f 5%, transparent);
+  .bg-\[\#0f9d58\]\/5 {
+    background-color: color-mix(in oklab, #0f9d58 5%, transparent);
   }
-  .bg-\[\#004f8f\]\/10 {
-    background-color: color-mix(in oklab, #004f8f 10%, transparent);
+  .bg-\[\#0f9d58\]\/10 {
+    background-color: color-mix(in oklab, #0f9d58 10%, transparent);
   }
-  .bg-\[\#f0f6fa\] {
-    background-color: #f0f6fa;
+  .bg-\[\#e6f4ea\] {
+    background-color: #e6f4ea;
   }
   .bg-\[\#f8fafc\] {
     background-color: #f8fafc;
@@ -951,12 +951,12 @@
     --tw-gradient-from: var(--color-blue-50);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .to-\[\#f0f6fa\] {
-    --tw-gradient-to: #f0f6fa;
+  .to-\[\#e6f4ea\] {
+    --tw-gradient-to: #e6f4ea;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .fill-\[\#004f8f\] {
-    fill: #004f8f;
+  .fill-\[\#0f9d58\] {
+    fill: #0f9d58;
   }
   .fill-blue-500 {
     fill: var(--color-blue-500);
@@ -1236,8 +1236,8 @@
   .text-\[\#1a202c\] {
     color: #1a202c;
   }
-  .text-\[\#004f8f\] {
-    color: #004f8f;
+  .text-\[\#0f9d58\] {
+    color: #0f9d58;
   }
   .text-amber-600 {
     color: var(--color-amber-600);
@@ -1355,8 +1355,8 @@
       color: var(--color-slate-400);
     }
   }
-  .accent-\[\#004f8f\] {
-    accent-color: #004f8f;
+  .accent-\[\#0f9d58\] {
+    accent-color: #0f9d58;
   }
   .opacity-80 {
     opacity: 80%;
@@ -1396,8 +1396,8 @@
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .ring-\[\#004f8f\]\/10 {
-    --tw-ring-color: color-mix(in oklab, #004f8f 10%, transparent);
+  .ring-\[\#0f9d58\]\/10 {
+    --tw-ring-color: color-mix(in oklab, #0f9d58 10%, transparent);
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -1458,12 +1458,12 @@
       }
     }
   }
-  .selection\:bg-\[\#004f8f\]\/20 {
+  .selection\:bg-\[\#0f9d58\]\/20 {
     & *::selection {
-      background-color: color-mix(in oklab, #004f8f 20%, transparent);
+      background-color: color-mix(in oklab, #0f9d58 20%, transparent);
     }
     &::selection {
-      background-color: color-mix(in oklab, #004f8f 20%, transparent);
+      background-color: color-mix(in oklab, #0f9d58 20%, transparent);
     }
   }
   .focus-within\:border-transparent {
@@ -1477,9 +1477,9 @@
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
-  .focus-within\:ring-\[\#004f8f\] {
+  .focus-within\:ring-\[\#0f9d58\] {
     &:focus-within {
-      --tw-ring-color: #004f8f;
+      --tw-ring-color: #0f9d58;
     }
   }
   .focus-within\:ring-emerald-500 {
@@ -1508,38 +1508,38 @@
       }
     }
   }
-  .hover\:bg-\[\#003c6e\] {
+  .hover\:bg-\[\#0b8043\] {
     &:hover {
       @media (hover: hover) {
-        background-color: #003c6e;
+        background-color: #0b8043;
       }
     }
   }
-  .hover\:bg-\[\#003d70\] {
+  .hover\:bg-\[\#0b8043\] {
     &:hover {
       @media (hover: hover) {
-        background-color: #003d70;
+        background-color: #0b8043;
       }
     }
   }
-  .hover\:bg-\[\#004f8f\]\/10 {
+  .hover\:bg-\[\#0f9d58\]\/10 {
     &:hover {
       @media (hover: hover) {
-        background-color: color-mix(in oklab, #004f8f 10%, transparent);
+        background-color: color-mix(in oklab, #0f9d58 10%, transparent);
       }
     }
   }
-  .hover\:bg-\[\#004f8f\]\/20 {
+  .hover\:bg-\[\#0f9d58\]\/20 {
     &:hover {
       @media (hover: hover) {
-        background-color: color-mix(in oklab, #004f8f 20%, transparent);
+        background-color: color-mix(in oklab, #0f9d58 20%, transparent);
       }
     }
   }
-  .hover\:bg-\[\#e6f0fa\] {
+  .hover\:bg-\[\#e6f4ea\] {
     &:hover {
       @media (hover: hover) {
-        background-color: #e6f0fa;
+        background-color: #e6f4ea;
       }
     }
   }
@@ -1746,9 +1746,9 @@
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
-  .focus\:ring-\[\#004f8f\] {
+  .focus\:ring-\[\#0f9d58\] {
     &:focus {
-      --tw-ring-color: #004f8f;
+      --tw-ring-color: #0f9d58;
     }
   }
   .focus\:ring-emerald-500 {
@@ -2025,7 +2025,6 @@
     }
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 .font-playfair {
   font-family: "Playfair Display", serif;
 }

@@ -15,14 +15,14 @@ export default function OffersSection({ offer, onTogglePaperless, onLearnMore }:
       {/* Header */}
       <div className="flex items-center justify-between border-b border-slate-200 pb-2">
         <div>
-          <span className="text-xs font-bold tracking-wider text-blue-600 block uppercase font-sans">
+          <span className="text-xs font-bold tracking-wider text-slate-700 block uppercase font-sans">
             EXCLUSIVE FOR YOU
           </span>
           <h2 className="text-2xl font-sans font-medium text-slate-900 mt-0.5">
             My Offers
           </h2>
         </div>
-        <button className="text-blue-600 hover:text-blue-800 text-xs font-semibold flex items-center space-x-1 hover:underline">
+        <button className="text-slate-700 hover:text-slate-950 text-xs font-semibold flex items-center space-x-1 hover:underline">
           <span>View all</span>
           <ArrowUpRight className="w-3.5 h-3.5" />
         </button>
@@ -46,7 +46,7 @@ export default function OffersSection({ offer, onTogglePaperless, onLearnMore }:
             <div className={`w-11 h-11 rounded-lg flex items-center justify-center shrink-0 border ${
               offer.active 
                 ? 'bg-emerald-100 border-emerald-300 text-emerald-700' 
-                : 'bg-blue-50 border-blue-200 text-blue-600'
+                : 'bg-slate-50 border-slate-200 text-slate-700'
             }`}>
               <Mail className="w-5 h-5 animate-pulse" />
             </div>
@@ -64,7 +64,7 @@ export default function OffersSection({ offer, onTogglePaperless, onLearnMore }:
             <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold ${
               offer.active 
                 ? 'bg-emerald-100 text-emerald-800 border border-emerald-200'
-                : 'bg-blue-100 text-[#004f8f] border border-blue-200'
+                : 'bg-slate-100 text-[#0f9d58] border border-slate-200'
             }`}>
               Save ${offer.savingsYearly} / yr
             </span>
@@ -103,7 +103,7 @@ export default function OffersSection({ offer, onTogglePaperless, onLearnMore }:
             className={`flex-1 py-2 px-4 rounded-lg text-xs font-semibold text-center transition-all cursor-pointer flex items-center justify-center space-x-1 border ${
               offer.active
                 ? 'bg-emerald-600 hover:bg-emerald-700 text-white border-transparent shadow-xs'
-                : 'bg-white hover:bg-[#e6f0fa] border-slate-200 hover:border-blue-300 text-slate-700 shadow-2xs'
+                : 'bg-white hover:bg-[#e6f4ea] border-slate-200 hover:border-slate-300 text-slate-700 shadow-2xs'
             }`}
             id="btn-offer-toggle"
           >
@@ -114,7 +114,7 @@ export default function OffersSection({ offer, onTogglePaperless, onLearnMore }:
               </>
             ) : (
               <>
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-1.5"></span>
+                <span className="w-1.5 h-1.5 bg-slate-500 rounded-full mr-1.5"></span>
                 <span>Go paperless</span>
               </>
             )}

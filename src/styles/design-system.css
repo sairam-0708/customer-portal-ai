@@ -1,0 +1,235 @@
+@layer utilities {
+  body {
+    min-height: 100vh;
+    background:
+      linear-gradient(180deg, rgba(232, 240, 254, 0.74) 0%, rgba(247, 249, 252, 0.94) 32%, var(--app-bg) 100%);
+    color: var(--app-text);
+    font-family: var(--font-sans);
+    font-size: 15px;
+  }
+
+  #portal-root {
+    background:
+      radial-gradient(circle at top left, rgba(15, 157, 143, 0.1), transparent 26rem),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(247, 249, 252, 0.95));
+    color: var(--app-text);
+    letter-spacing: 0;
+  }
+
+  .app-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    color: var(--app-text);
+  }
+
+  .app-header {
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--app-text);
+    border-bottom: 1px solid var(--app-border);
+    box-shadow: var(--app-shadow-soft);
+    backdrop-filter: blur(18px);
+  }
+
+  .app-header-top {
+    height: 4rem;
+    border-bottom: 1px solid var(--app-border);
+  }
+
+  .app-brand-mark {
+    background: var(--app-primary);
+    color: white;
+    border-radius: var(--app-radius);
+  }
+
+  .app-nav-button {
+    color: var(--app-text-muted);
+    font-size: 0.82rem;
+    font-weight: 650;
+  }
+
+  .app-nav-button:hover,
+  .app-nav-button.is-active {
+    color: var(--app-primary);
+  }
+
+  .app-subheader {
+    background:
+      linear-gradient(135deg, rgba(241, 243, 244, 0.92), rgba(228, 244, 242, 0.72)),
+      var(--app-surface);
+    color: var(--app-text);
+    border-bottom: 1px solid var(--app-border);
+  }
+
+  .app-card,
+  #portal-root .bg-white {
+    background-color: rgba(255, 255, 255, 0.94) !important;
+    border-color: var(--app-border) !important;
+    box-shadow: var(--app-shadow-soft);
+  }
+
+  #portal-root .rounded-2xl,
+  #portal-root .rounded-xl {
+    border-radius: var(--app-radius) !important;
+  }
+
+  #portal-root .shadow-xs,
+  #portal-root .shadow-sm,
+  #portal-root .shadow-md {
+    box-shadow: var(--app-shadow-soft) !important;
+  }
+
+  #portal-root .hover\:shadow-md:hover,
+  #portal-root .hover\:shadow-lg:hover {
+    box-shadow: var(--app-shadow) !important;
+  }
+
+  .app-eyebrow {
+    color: var(--app-primary) !important;
+  }
+
+  #portal-root input,
+  #portal-root select,
+  #portal-root textarea {
+    border-color: var(--app-border) !important;
+    color: var(--app-text);
+  }
+
+  #portal-root input:focus,
+  #portal-root select:focus,
+  #portal-root textarea:focus {
+    box-shadow: var(--app-focus) !important;
+    border-color: transparent !important;
+    outline: none;
+  }
+
+  .bg-\[\#0f9d58\],
+  #portal-root .bg-\[\#0f9d58\] {
+    background-color: var(--app-primary) !important;
+  }
+
+  .hover\:bg-\[\#0b8043\]:hover,
+  #portal-root .hover\:bg-\[\#0b8043\]:hover {
+    background-color: var(--app-primary-hover) !important;
+  }
+
+  .bg-\[\#0f9d58\]\/5,
+  #portal-root .bg-\[\#0f9d58\]\/5 {
+    background-color: rgba(32, 33, 36, 0.05) !important;
+  }
+
+  .bg-\[\#0f9d58\]\/10,
+  .hover\:bg-\[\#0f9d58\]\/10:hover,
+  #portal-root .bg-\[\#0f9d58\]\/10,
+  #portal-root .hover\:bg-\[\#0f9d58\]\/10:hover {
+    background-color: rgba(32, 33, 36, 0.1) !important;
+  }
+
+  .hover\:bg-\[\#0f9d58\]\/20:hover,
+  #portal-root .hover\:bg-\[\#0f9d58\]\/20:hover {
+    background-color: rgba(32, 33, 36, 0.18) !important;
+  }
+
+  .bg-\[\#e6f4ea\],
+  .hover\:bg-\[\#e6f4ea\]:hover,
+  #portal-root .bg-\[\#e6f4ea\],
+  #portal-root .hover\:bg-\[\#e6f4ea\]:hover {
+    background-color: var(--app-primary-soft) !important;
+  }
+
+  .hover\:bg-\[\#d8eadf\]:hover,
+  #portal-root .hover\:bg-\[\#d8eadf\]:hover {
+    background-color: #d8eadf !important;
+  }
+
+  .text-\[\#0f9d58\],
+  #portal-root .text-\[\#0f9d58\] {
+    color: var(--app-primary) !important;
+  }
+
+  .border-\[\#0f9d58\],
+  #portal-root .border-\[\#0f9d58\] {
+    border-color: var(--app-primary) !important;
+  }
+
+  .border-\[\#0f9d58\]\/10,
+  #portal-root .border-\[\#0f9d58\]\/10 {
+    border-color: rgba(32, 33, 36, 0.1) !important;
+  }
+
+  .border-\[\#0f9d58\]\/30,
+  #portal-root .border-\[\#0f9d58\]\/30 {
+    border-color: rgba(32, 33, 36, 0.3) !important;
+  }
+
+  .border-\[\#b7dfc2\],
+  #portal-root .border-\[\#b7dfc2\] {
+    border-color: var(--app-border-strong) !important;
+  }
+
+  .ring-\[\#0f9d58\]\/10,
+  #portal-root .ring-\[\#0f9d58\]\/10 {
+    --tw-ring-color: rgba(32, 33, 36, 0.12) !important;
+  }
+
+  .focus-within\:ring-\[\#0f9d58\]:focus-within,
+  .focus\:ring-\[\#0f9d58\]:focus,
+  #portal-root .focus-within\:ring-\[\#0f9d58\]:focus-within,
+  #portal-root .focus\:ring-\[\#0f9d58\]:focus {
+    box-shadow: var(--app-focus) !important;
+    border-color: transparent !important;
+    outline: none;
+  }
+
+  .accent-\[\#0f9d58\],
+  #portal-root .accent-\[\#0f9d58\] {
+    accent-color: var(--app-primary) !important;
+  }
+
+  .selection\:bg-\[\#0f9d58\]\/20::selection,
+  #portal-root.selection\:bg-\[\#0f9d58\]\/20::selection {
+    background-color: rgba(15, 157, 143, 0.2) !important;
+  }
+
+  .from-slate-50 {
+    --tw-gradient-from: var(--color-slate-50) !important;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)) !important;
+  }
+
+  .to-\[\#e6f4ea\] {
+    --tw-gradient-to: var(--app-primary-soft) !important;
+  }
+
+  .fill-slate-700 {
+    fill: var(--color-slate-700) !important;
+  }
+
+  .border-t-slate-800 {
+    border-top-color: var(--color-slate-800) !important;
+  }
+
+  .hover\:text-slate-950:hover {
+    color: var(--color-slate-950) !important;
+  }
+
+  .hover\:border-slate-300:hover {
+    border-color: var(--color-slate-300) !important;
+  }
+
+  .hover\:bg-slate-900:hover {
+    background-color: var(--color-slate-900) !important;
+  }
+
+  #portal-root button {
+    letter-spacing: 0;
+  }
+
+  #portal-root table thead tr {
+    background-color: var(--app-surface-muted) !important;
+  }
+
+  #portal-footer {
+    background: var(--app-ink) !important;
+  }
+}

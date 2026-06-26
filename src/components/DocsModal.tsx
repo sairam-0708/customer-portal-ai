@@ -41,9 +41,9 @@ export default function DocsModal({ policy, onClose }: DocsModalProps) {
         id="docs-modal"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 bg-[#004f8f] text-white">
+        <div className="flex items-center justify-between px-6 py-4 bg-[#0f9d58] text-white">
           <div className="flex items-center space-x-2">
-            <FileText className="w-5 h-5 fill-white text-[#004f8f]" />
+            <FileText className="w-5 h-5 fill-white text-[#0f9d58]" />
             <h3 className="font-sans font-semibold text-lg">Digital Documents Vault</h3>
           </div>
           <button 
@@ -72,7 +72,7 @@ export default function DocsModal({ policy, onClose }: DocsModalProps) {
                   id={`doc-row-${doc.id}`}
                 >
                   <div className="flex items-start space-x-3.5">
-                    <div className="p-2 bg-blue-50 text-[#004f8f] rounded-lg shrink-0">
+                    <div className="p-2 bg-slate-50 text-[#0f9d58] rounded-lg shrink-0">
                       <FileText className="w-4.5 h-4.5" />
                     </div>
                     <div>
@@ -86,11 +86,11 @@ export default function DocsModal({ policy, onClose }: DocsModalProps) {
                   <div className="flex items-center space-x-1.5 shrink-0">
                     <button
                       onClick={() => handleDownload(doc.id, doc.title)}
-                      className="p-2 text-slate-500 hover:text-blue-700 hover:bg-slate-100 rounded-lg transition-colors cursor-pointer"
+                      className="p-2 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors cursor-pointer"
                       title="Download PDF Document"
                     >
                       {isDownloading ? (
-                        <div className="w-4.5 h-4.5 border-2 border-slate-300 border-t-blue-600 rounded-full animate-spin" />
+                        <div className="w-4.5 h-4.5 border-2 border-slate-300 border-t-slate-800 rounded-full animate-spin" />
                       ) : (
                         <Download className="w-4.5 h-4.5" />
                       )}

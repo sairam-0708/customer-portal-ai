@@ -78,7 +78,7 @@ export default function PortfolioPage({
           transition={{ delay: 0.05 }}
           className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs flex items-start space-x-4"
         >
-          <div className="p-3 bg-blue-50 rounded-xl text-[#004f8f]">
+          <div className="p-3 bg-slate-50 rounded-xl text-[#0f9d58]">
             <Shield className="w-6 h-6" />
           </div>
           <div>
@@ -86,7 +86,7 @@ export default function PortfolioPage({
             <span className="text-2xl font-bold text-slate-800 block mt-0.5">{activePoliciesCount}</span>
             <button 
               onClick={() => onNavigateToTab('policies')}
-              className="text-xs text-[#004f8f] font-medium hover:underline mt-1.5 flex items-center"
+              className="text-xs text-[#0f9d58] font-medium hover:underline mt-1.5 flex items-center"
             >
               Manage policies <ChevronRight className="w-3 h-3 ml-0.5" />
             </button>
@@ -123,7 +123,7 @@ export default function PortfolioPage({
             <span className="text-2xl font-bold text-slate-800 block mt-0.5">{activeClaimsCount}</span>
             <button 
               onClick={() => onNavigateToTab('claims')}
-              className="text-xs text-[#004f8f] font-medium hover:underline mt-1.5 flex items-center"
+              className="text-xs text-[#0f9d58] font-medium hover:underline mt-1.5 flex items-center"
             >
               View claims center <ChevronRight className="w-3 h-3 ml-0.5" />
             </button>
@@ -136,15 +136,15 @@ export default function PortfolioPage({
           transition={{ delay: 0.2 }}
           className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs flex items-start space-x-4"
         >
-          <div className="p-3 bg-[#f0f6fa] rounded-xl text-[#004f8f]">
+          <div className="p-3 bg-[#e6f4ea] rounded-xl text-[#0f9d58]">
             <Sparkles className="w-6 h-6" />
           </div>
           <div>
             <span className="text-xs font-semibold text-slate-400 block tracking-wider uppercase">Total Savings</span>
-            <span className="text-2xl font-bold text-[#004f8f] block mt-0.5">
+            <span className="text-2xl font-bold text-[#0f9d58] block mt-0.5">
               ${(paperlessOffer.active ? 36 : 0) + (isBundleApplied ? 540 : 0)}/yr
             </span>
-            <span className="text-[11px] text-[#004f8f] font-medium block mt-1">Active discounts</span>
+            <span className="text-[11px] text-[#0f9d58] font-medium block mt-1">Active discounts</span>
           </div>
         </motion.div>
       </div>
@@ -163,7 +163,7 @@ export default function PortfolioPage({
               </div>
               <button 
                 onClick={() => onNavigateToTab('policies')}
-                className="text-xs font-semibold text-[#004f8f] hover:underline flex items-center"
+                className="text-xs font-semibold text-[#0f9d58] hover:underline flex items-center"
               >
                 View all details <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
               </button>
@@ -179,7 +179,7 @@ export default function PortfolioPage({
                   >
                     <div className="flex items-start space-x-3.5">
                       <div className={`p-2.5 rounded-lg shrink-0 mt-0.5 ${
-                        isAuto ? 'bg-blue-100/70 text-[#004f8f]' : 'bg-orange-100/70 text-orange-700'
+                        isAuto ? 'bg-slate-100 text-[#0f9d58]' : 'bg-orange-100/70 text-orange-700'
                       }`}>
                         <Shield className="w-5 h-5" />
                       </div>
@@ -208,7 +208,7 @@ export default function PortfolioPage({
                       )}
                       <button
                         onClick={() => onDetailsClick(policy)}
-                        className="px-3 py-1.5 bg-[#004f8f]/5 hover:bg-[#004f8f]/10 text-[#004f8f] text-xs font-bold rounded-lg transition-all"
+                        className="px-3 py-1.5 bg-[#0f9d58]/5 hover:bg-[#0f9d58]/10 text-[#0f9d58] text-xs font-bold rounded-lg transition-all"
                       >
                         View Limits
                       </button>
@@ -228,7 +228,7 @@ export default function PortfolioPage({
               </div>
               <button 
                 onClick={() => onNavigateToTab('billing')}
-                className="text-xs font-semibold text-[#004f8f] hover:underline flex items-center"
+                className="text-xs font-semibold text-[#0f9d58] hover:underline flex items-center"
               >
                 View payment records <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
               </button>
@@ -261,7 +261,7 @@ export default function PortfolioPage({
 
               {/* Event 3 */}
               <div className="relative">
-                <div className="absolute -left-[21px] top-1.5 bg-blue-500 border-2 border-white w-3 h-3 rounded-full shadow-xs" />
+                <div className="absolute -left-[21px] top-1.5 bg-slate-500 border-2 border-white w-3 h-3 rounded-full shadow-xs" />
                 <div className="space-y-0.5">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold text-slate-900">Welcome to MyShieldGuard Customer Portal</span>

@@ -29,8 +29,8 @@ export default function IdCardModal({ policy, onClose }: IdCardModalProps) {
             <title>ShieldGuard Insurance ID Card</title>
             <style>
               body { font-family: sans-serif; padding: 40px; }
-              .card { border: 2px solid #004f8f; border-radius: 8px; padding: 24px; max-width: 500px; margin: 0 auto; }
-              .header { border-bottom: 2px solid #004f8f; padding-bottom: 12px; margin-bottom: 16px; }
+              .card { border: 2px solid #0f9d58; border-radius: 8px; padding: 24px; max-width: 500px; margin: 0 auto; }
+              .header { border-bottom: 2px solid #0f9d58; padding-bottom: 12px; margin-bottom: 16px; }
               .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 13px; }
               .full { grid-column: span 2; }
               .label { color: #666; font-size: 11px; margin-bottom: 2px; text-transform: uppercase; }
@@ -63,9 +63,9 @@ export default function IdCardModal({ policy, onClose }: IdCardModalProps) {
         id="id-card-modal"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 bg-[#004f8f] text-white">
+        <div className="flex items-center justify-between px-6 py-4 bg-[#0f9d58] text-white">
           <div className="flex items-center space-x-2">
-            <Shield className="w-5 h-5 fill-white text-[#004f8f]" />
+            <Shield className="w-5 h-5 fill-white text-[#0f9d58]" />
             <h3 className="font-sans font-semibold text-lg">Digital Insurance ID Card</h3>
           </div>
           <button 
@@ -86,18 +86,18 @@ export default function IdCardModal({ policy, onClose }: IdCardModalProps) {
           {/* Printable Card area */}
           <div 
             ref={cardRef}
-            className="border-2 border-[#004f8f] rounded-xl p-5 bg-slate-50 relative overflow-hidden shadow-inner"
+            className="border-2 border-[#0f9d58] rounded-xl p-5 bg-slate-50 relative overflow-hidden shadow-inner"
             id="id-card-canvas"
           >
             {/* Watermark logo */}
             <div className="absolute right-4 bottom-4 opacity-[0.03] select-none pointer-events-none">
-              <Shield className="w-48 h-48 text-[#004f8f]" />
+              <Shield className="w-48 h-48 text-[#0f9d58]" />
             </div>
 
             {/* Top Row Logo */}
-            <div className="flex justify-between items-start border-b border-[#004f8f]/30 pb-3 mb-4">
+            <div className="flex justify-between items-start border-b border-[#0f9d58]/30 pb-3 mb-4">
               <div>
-                <span className="font-bold text-lg tracking-wider text-[#004f8f] block font-sans">S H I E L D G U A R D</span>
+                <span className="font-bold text-lg tracking-wider text-[#0f9d58] block font-sans">S H I E L D G U A R D</span>
                 <span className="text-[9px] tracking-widest text-slate-500 uppercase block font-mono">INSURANCE COMPANY</span>
               </div>
               <div className="text-right">
@@ -142,7 +142,7 @@ export default function IdCardModal({ policy, onClose }: IdCardModalProps) {
                 <strong className="text-slate-800">Sep 14, 2026</strong>
               </div>
 
-              <div className="col-span-2 border-t border-[#004f8f]/10 pt-3 flex justify-between items-center text-[10px] text-slate-500">
+              <div className="col-span-2 border-t border-[#0f9d58]/10 pt-3 flex justify-between items-center text-[10px] text-slate-500">
                 <span>Subject to policy provisions and limits</span>
                 <span className="font-mono">NAIC Code: 26271</span>
               </div>
@@ -153,7 +153,7 @@ export default function IdCardModal({ policy, onClose }: IdCardModalProps) {
           <div className="flex items-center justify-between gap-4 pt-2">
             <button
               onClick={handlePrint}
-              className="flex-1 py-3 px-4 bg-[#004f8f] hover:bg-[#003c6e] text-white rounded-xl text-sm font-semibold transition-all shadow-md hover:shadow-lg flex items-center justify-center space-x-2 cursor-pointer"
+              className="flex-1 py-3 px-4 bg-[#0f9d58] hover:bg-[#0b8043] text-white rounded-xl text-sm font-semibold transition-all shadow-md hover:shadow-lg flex items-center justify-center space-x-2 cursor-pointer"
               id="print-proof-btn"
             >
               <Printer className="w-4 h-4" />
