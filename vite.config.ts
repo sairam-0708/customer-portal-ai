@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     plugins: [react()],
+    base: 'portals/customer-portal-ai/',
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
