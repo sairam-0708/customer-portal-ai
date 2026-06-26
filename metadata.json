@@ -1,0 +1,6 @@
+{
+  "name": "Insurance Customer Portal",
+  "description": "An interactive, highly polished, and responsive customer portal based on the ShieldGuard dashboard, featuring active coverages, agency contacts, billing details, and interactive claim and payment managers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
