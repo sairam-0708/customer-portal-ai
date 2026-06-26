@@ -1,0 +1,3 @@
+.upload-progress-bar {
+  width: var(--upload-progress, 0%);
+}

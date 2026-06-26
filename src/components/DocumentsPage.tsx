@@ -397,7 +397,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
                       <span className="text-[10px] text-slate-400 block mb-3 font-medium">Use mouse or touch finger to write signature</span>
                       <div className="h-20 bg-white border border-slate-100 rounded-lg flex items-center justify-center font-serif text-slate-400 italic text-sm relative overflow-hidden select-none">
                         {signerName ? (
-                          <span className="text-slate-800 text-lg tracking-wider opacity-80" style={{ fontFamily: '"Playfair Display", serif' }}>
+                          <span className="text-slate-800 text-lg tracking-wider opacity-80 font-playfair">
                             {signerName}
                           </span>
                         ) : (

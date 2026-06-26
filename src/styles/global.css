@@ -1,0 +1,11 @@
+@layer properties;
+@layer theme, base, components, utilities;
+
+@import "./theme.css";
+@import "./base.css";
+@import "./utilities.css";
+@import "./properties.css";
+
+@import "./typography.css";
+@import "./animations.css";
+@import "./progress.css";

@@ -327,9 +327,9 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
                   <Sparkles className="w-3.5 h-3.5 animate-pulse" />
                 </div>
                 <div className="p-3 bg-white border border-slate-200/60 rounded-2xl flex items-center space-x-1.5 h-8">
-                  <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
-                  <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
-                  <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+                  <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce anim-delay-0"></span>
+                  <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce anim-delay-150"></span>
+                  <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce anim-delay-300"></span>
                 </div>
               </div>
             )}

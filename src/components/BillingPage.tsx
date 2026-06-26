@@ -336,7 +336,7 @@ export default function BillingPage({
                   <span>52%</span>
                 </div>
                 <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                  <div className="bg-[#004f8f] h-full" style={{ width: '52%' }}></div>
+                  <div className="bg-[#004f8f] h-full w-[52%]"></div>
                 </div>
               </div>
 
@@ -347,7 +347,7 @@ export default function BillingPage({
                   <span>28%</span>
                 </div>
                 <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                  <div className="bg-indigo-500 h-full" style={{ width: '28%' }}></div>
+                  <div className="bg-indigo-500 h-full w-[28%]"></div>
                 </div>
               </div>
 
@@ -358,7 +358,7 @@ export default function BillingPage({
                   <span>15%</span>
                 </div>
                 <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                  <div className="bg-amber-500 h-full" style={{ width: '15%' }}></div>
+                  <div className="bg-amber-500 h-full w-[15%]"></div>
                 </div>
               </div>
 
@@ -369,7 +369,7 @@ export default function BillingPage({
                   <span>5%</span>
                 </div>
                 <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                  <div className="bg-slate-400 h-full" style={{ width: '5%' }}></div>
+                  <div className="bg-slate-400 h-full w-[5%]"></div>
                 </div>
               </div>
             </div>

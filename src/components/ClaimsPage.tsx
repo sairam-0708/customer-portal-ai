@@ -299,7 +299,7 @@ export default function ClaimsPage({
                         <span>{uploadProgress}%</span>
                       </div>
                       <div className="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                        <div className="bg-[#004f8f] h-full transition-all duration-300" style={{ width: `${uploadProgress}%` }}></div>
+                        <div className="bg-[#004f8f] h-full transition-all duration-300 upload-progress-bar" style={{ '--upload-progress': `${uploadProgress}%` } as React.CSSProperties}></div>
                       </div>
                     </div>
                   )}
