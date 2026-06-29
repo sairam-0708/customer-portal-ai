@@ -130,7 +130,7 @@ export default function App() {
   // Application feedback Toast
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  const footerLogoSrc = `${import.meta.env.BASE_URL}shieldguard-logo-white.svg`;
+  const footerLogoSrc = `${import.meta.env.BASE_URL}shieldguard-logo.png`;
 
 
   // Persist states automatically when changed
