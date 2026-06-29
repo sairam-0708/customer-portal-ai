@@ -246,7 +246,7 @@ export default function ClaimsPage({
       {/* 1. Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between border-b border-slate-200 pb-4 gap-4">
         <div>
-          <span className="text-xs font-bold tracking-wider text-[#004f8f] block uppercase font-sans">ShieldGuard Claims Center</span>
+          <span className="text-xs font-bold tracking-wider text-[#of9d58] block uppercase font-sans">ShieldGuard Claims Center</span>
           <h1 className="text-2xl sm:text-3xl font-sans font-medium text-slate-900 mt-1">Claims & Safety Hub</h1>
           <p className="text-xs sm:text-sm text-slate-500 font-sans font-medium">Report accident incidents, schedule mobile windshield repairs, and complete preventive safety checklists.</p>
         </div>
@@ -266,7 +266,7 @@ export default function ClaimsPage({
           onClick={() => setActiveSubTab('claims')}
           className={`px-4 py-2.5 font-bold text-xs tracking-wider uppercase border-b-2 transition-all cursor-pointer ${
             activeSubTab === 'claims'
-              ? 'border-[#004f8f] text-[#004f8f]'
+              ? 'border-[#of9d58] text-[#of9d58]'
               : 'border-transparent text-slate-400 hover:text-slate-600'
           }`}
         >
@@ -276,7 +276,7 @@ export default function ClaimsPage({
           onClick={() => setActiveSubTab('glass')}
           className={`px-4 py-2.5 font-bold text-xs tracking-wider uppercase border-b-2 transition-all cursor-pointer ${
             activeSubTab === 'glass'
-              ? 'border-[#004f8f] text-[#004f8f]'
+              ? 'border-[#of9d58] text-[#of9d58]'
               : 'border-transparent text-slate-400 hover:text-slate-600'
           }`}
         >
@@ -286,7 +286,7 @@ export default function ClaimsPage({
           onClick={() => setActiveSubTab('prevention')}
           className={`px-4 py-2.5 font-bold text-xs tracking-wider uppercase border-b-2 transition-all cursor-pointer ${
             activeSubTab === 'prevention'
-              ? 'border-[#004f8f] text-[#004f8f]'
+              ? 'border-[#of9d58] text-[#of9d58]'
               : 'border-transparent text-slate-400 hover:text-slate-600'
           }`}
         >
@@ -314,7 +314,7 @@ export default function ClaimsPage({
                 </p>
                 <button
                   onClick={onFileClaimClick}
-                  className="px-4 py-2 bg-[#004f8f] text-white text-xs font-bold rounded-xl hover:bg-[#003d70] transition-colors cursor-pointer"
+                  className="px-4 py-2 bg-[#of9d58] text-white text-xs font-bold rounded-xl hover:bg-[#003d70] transition-colors cursor-pointer"
                 >
                   File a Claim Incident
                 </button>
@@ -338,7 +338,7 @@ export default function ClaimsPage({
                           onClick={() => setSelectedClaimId(claim.id)}
                           className={`w-full p-4 rounded-2xl border text-left flex flex-col justify-between transition-all cursor-pointer ${
                             isActive
-                              ? 'bg-white border-[#004f8f] ring-2 ring-[#004f8f]/10 shadow-xs'
+                              ? 'bg-white border-[#of9d58] ring-2 ring-[#of9d58]/10 shadow-xs'
                               : 'bg-white hover:bg-slate-50 border-slate-200'
                           }`}
                         >
@@ -362,7 +362,7 @@ export default function ClaimsPage({
 
                           <div className="flex items-center justify-between border-t border-slate-100 pt-2.5 mt-2.5 w-full text-[10px]">
                             <span className="text-slate-400 font-mono">ID: {claim.id}</span>
-                            <span className="text-[#004f8f] font-bold flex items-center">
+                            <span className="text-[#of9d58] font-bold flex items-center">
                               View timeline <ChevronRight className="w-3 h-3 ml-0.5" />
                             </span>
                           </div>
@@ -381,7 +381,7 @@ export default function ClaimsPage({
                       {/* Section Header */}
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 pb-4 gap-2">
                         <div>
-                          <span className="text-xs uppercase font-bold tracking-widest text-[#004f8f]">Track Pipeline Status</span>
+                          <span className="text-xs uppercase font-bold tracking-widest text-[#of9d58]">Track Pipeline Status</span>
                           <h3 className="font-bold text-base text-slate-900 mt-0.5">{activeClaim.policyTitle} claim</h3>
                         </div>
                         <div className="text-left sm:text-right">
@@ -431,7 +431,7 @@ export default function ClaimsPage({
                       {/* Claim Notes Block */}
                       <div className="p-4 bg-[#f0f6fa] border border-blue-100 rounded-xl space-y-2">
                         <div className="flex items-center gap-1.5 text-xs font-bold text-slate-800">
-                          <Clock className="w-4 h-4 text-[#004f8f]" />
+                          <Clock className="w-4 h-4 text-[#of9d58]" />
                           <span>Latest Adjuster Correspondence</span>
                         </div>
                         <p className="text-xs text-slate-600 leading-relaxed font-sans">
@@ -450,7 +450,7 @@ export default function ClaimsPage({
                           </div>
 
 
-                          <label className="px-3 py-1.5 bg-slate-50 border border-slate-200 hover:bg-slate-100 text-[#004f8f] font-bold text-xs rounded-lg transition-colors cursor-pointer flex items-center gap-1.5">
+                          <label className="px-3 py-1.5 bg-slate-50 border border-slate-200 hover:bg-slate-100 text-[#of9d58] font-bold text-xs rounded-lg transition-colors cursor-pointer flex items-center gap-1.5">
                             <Upload className="w-3.5 h-3.5" />
                             <span>Upload files</span>
                             <input
@@ -470,7 +470,7 @@ export default function ClaimsPage({
                               <span>{uploadProgress}%</span>
                             </div>
                             <div className="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                              <div className="bg-[#004f8f] h-full transition-all duration-300 upload-progress-bar" style={{ '--upload-progress': `${uploadProgress}%` } as React.CSSProperties}></div>
+                              <div className="bg-[#of9d58] h-full transition-all duration-300 upload-progress-bar" style={{ '--upload-progress': `${uploadProgress}%` } as React.CSSProperties}></div>
                             </div>
                           </div>
                         )}
@@ -520,7 +520,7 @@ export default function ClaimsPage({
             {/* 3. Accident Out-of-pocket Estimator tool */}
             <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs max-w-3xl">
               <div className="flex items-center space-x-2 border-b border-slate-100 pb-3 mb-5">
-                <Calculator className="w-5 h-5 text-[#004f8f]" />
+                <Calculator className="w-5 h-5 text-[#of9d58]" />
                 <h3 className="font-sans font-bold text-base text-slate-900">Incident Cost & Out-of-Pocket Estimator</h3>
               </div>
 
@@ -560,7 +560,7 @@ export default function ClaimsPage({
 
 
                 <div className="bg-[#f0f6fa] border border-blue-100 rounded-xl p-3 flex flex-col justify-between h-[68px]">
-                  <span className="text-[10px] font-bold text-[#004f8f] uppercase">Policy Deductible:</span>
+                  <span className="text-[10px] font-bold text-[#of9d58] uppercase">Policy Deductible:</span>
                   <span className="text-sm font-black text-slate-800">${deductible}</span>
                 </div>
               </div>
@@ -577,7 +577,7 @@ export default function ClaimsPage({
 
                 <div className="space-y-1 border-t sm:border-t-0 sm:border-l border-slate-200 pt-3 sm:pt-0 sm:pl-4">
                   <span className="text-xs text-slate-400 block">Covered & Disbursed by ShieldGuard:</span>
-                  <span className="text-2xl font-black text-[#004f8f] block">${shieldGuardCoverage.toLocaleString()}</span>
+                  <span className="text-2xl font-black text-[#of9d58] block">${shieldGuardCoverage.toLocaleString()}</span>
                   <p className="text-[10px] text-slate-400">ShieldGuard indemnifies everything above deductible limits.</p>
                 </div>
               </div>
@@ -599,7 +599,7 @@ export default function ClaimsPage({
             <div className="lg:col-span-2 space-y-6">
               <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-5">
                 <div className="flex items-center space-x-2.5 border-b border-slate-100 pb-3">
-                  <div className="p-1.5 bg-blue-50 text-[#004f8f] rounded-lg">
+                  <div className="p-1.5 bg-blue-50 text-[#of9d58] rounded-lg">
                     <Info className="w-5 h-5" />
                   </div>
                   <div>
@@ -660,7 +660,7 @@ export default function ClaimsPage({
                             name="glassService"
                             checked={glassService === 'mobile'}
                             onChange={() => setGlassService('mobile')}
-                            className="text-[#004f8f] focus:ring-[#004f8f]/30"
+                            className="text-[#of9d58] focus:ring-[#of9d58]/30"
                           />
                           <span>Mobile Dispatch (We come to you)</span>
                         </label>
@@ -670,7 +670,7 @@ export default function ClaimsPage({
                             name="glassService"
                             checked={glassService === 'shop'}
                             onChange={() => setGlassService('shop')}
-                            className="text-[#004f8f] focus:ring-[#004f8f]/30"
+                            className="text-[#of9d58] focus:ring-[#of9d58]/30"
                           />
                           <span>In-Shop drop-off center</span>
                         </label>
@@ -722,7 +722,7 @@ export default function ClaimsPage({
                   <div className="flex justify-end pt-2">
                     <button
                       type="submit"
-                      className="px-6 py-3 bg-[#004f8f] hover:bg-[#003d70] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer flex items-center space-x-1"
+                      className="px-6 py-3 bg-[#of9d58] hover:bg-[#003d70] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer flex items-center space-x-1"
                     >
                       <span>Confirm AutoGlass Dispatch</span>
                       <ChevronRight className="w-4 h-4" />
@@ -810,8 +810,8 @@ export default function ClaimsPage({
             <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-4">
               <div className="flex justify-between items-center border-b border-slate-100 pb-3">
                 <div className="flex items-center space-x-2">
-                  <div className="p-1.5 bg-[#004f8f]/10 text-[#004f8f] rounded-lg">
-                    <ShieldCheck className="w-5 h-5 text-[#004f8f]" />
+                  <div className="p-1.5 bg-[#of9d58]/10 text-[#of9d58] rounded-lg">
+                    <ShieldCheck className="w-5 h-5 text-[#of9d58]" />
                   </div>
                   <div>
                     <h3 className="font-bold text-sm text-slate-900 uppercase tracking-wider">Home Protection Audit</h3>
@@ -844,7 +844,7 @@ export default function ClaimsPage({
                     checked={homeChecks.smoke}
                     disabled={isHomeCertified}
                     onChange={(e) => setHomeChecks(prev => ({ ...prev, smoke: e.target.checked }))}
-                    className="w-4 h-4 rounded text-[#004f8f] border-slate-300 mt-0.5 focus:ring-[#004f8f]/30"
+                    className="w-4 h-4 rounded text-[#of9d58] border-slate-300 mt-0.5 focus:ring-[#of9d58]/30"
                   />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Smoke & CO Alarms Checked</span>
@@ -859,7 +859,7 @@ export default function ClaimsPage({
                     checked={homeChecks.fireExt}
                     disabled={isHomeCertified}
                     onChange={(e) => setHomeChecks(prev => ({ ...prev, fireExt: e.target.checked }))}
-                    className="w-4 h-4 rounded text-[#004f8f] border-slate-300 mt-0.5 focus:ring-[#004f8f]/30"
+                    className="w-4 h-4 rounded text-[#of9d58] border-slate-300 mt-0.5 focus:ring-[#of9d58]/30"
                   />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Fire Extinguishers Stowed</span>
@@ -874,7 +874,7 @@ export default function ClaimsPage({
                     checked={homeChecks.waterLeak}
                     disabled={isHomeCertified}
                     onChange={(e) => setHomeChecks(prev => ({ ...prev, waterLeak: e.target.checked }))}
-                    className="w-4 h-4 rounded text-[#004f8f] border-slate-300 mt-0.5 focus:ring-[#004f8f]/30"
+                    className="w-4 h-4 rounded text-[#of9d58] border-slate-300 mt-0.5 focus:ring-[#of9d58]/30"
                   />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Water Leak Detection Sensors</span>
@@ -889,7 +889,7 @@ export default function ClaimsPage({
                     checked={homeChecks.treeTrim}
                     disabled={isHomeCertified}
                     onChange={(e) => setHomeChecks(prev => ({ ...prev, treeTrim: e.target.checked }))}
-                    className="w-4 h-4 rounded text-[#004f8f] border-slate-300 mt-0.5 focus:ring-[#004f8f]/30"
+                    className="w-4 h-4 rounded text-[#of9d58] border-slate-300 mt-0.5 focus:ring-[#of9d58]/30"
                   />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Roof Clearances Trimmed</span>
@@ -904,7 +904,7 @@ export default function ClaimsPage({
                     checked={homeChecks.shutoff}
                     disabled={isHomeCertified}
                     onChange={(e) => setHomeChecks(prev => ({ ...prev, shutoff: e.target.checked }))}
-                    className="w-4 h-4 rounded text-[#004f8f] border-slate-300 mt-0.5 focus:ring-[#004f8f]/30"
+                    className="w-4 h-4 rounded text-[#of9d58] border-slate-300 mt-0.5 focus:ring-[#of9d58]/30"
                   />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Water & Gas Valves Tagged</span>
@@ -917,7 +917,7 @@ export default function ClaimsPage({
               {!isHomeCertified && (
                 <button
                   onClick={() => handleCertifySafety('home')}
-                  className="w-full py-3 bg-[#004f8f] hover:bg-[#003c6e] text-white font-bold text-xs rounded-xl shadow-xs transition-colors cursor-pointer"
+                  className="w-full py-3 bg-[#of9d58] hover:bg-[#003c6e] text-white font-bold text-xs rounded-xl shadow-xs transition-colors cursor-pointer"
                 >
                   Certify Home Safety Audit & Claim $15.00 Credit
                 </button>
@@ -934,8 +934,8 @@ export default function ClaimsPage({
             <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-4">
               <div className="flex justify-between items-center border-b border-slate-100 pb-3">
                 <div className="flex items-center space-x-2">
-                  <div className="p-1.5 bg-[#004f8f]/10 text-[#004f8f] rounded-lg">
-                    <UserCheck className="w-5 h-5 text-[#004f8f]" />
+                  <div className="p-1.5 bg-[#of9d58]/10 text-[#of9d58] rounded-lg">
+                    <UserCheck className="w-5 h-5 text-[#of9d58]" />
                   </div>
                   <div>
                     <h3 className="font-bold text-sm text-slate-900 uppercase tracking-wider">Auto Safe Driver Check</h3>
@@ -968,7 +968,7 @@ export default function ClaimsPage({
                     checked={autoChecks.wipers}
                     disabled={isAutoCertified}
                     onChange={(e) => setAutoChecks(prev => ({ ...prev, wipers: e.target.checked }))}
-                    className="w-4 h-4 rounded text-[#004f8f] border-slate-300 mt-0.5 focus:ring-[#004f8f]/30"
+                    className="w-4 h-4 rounded text-[#of9d58] border-slate-300 mt-0.5 focus:ring-[#of9d58]/30"
                   />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Premium Wiper Blades Installed</span>
@@ -983,7 +983,7 @@ export default function ClaimsPage({
                     checked={autoChecks.tireTread}
                     disabled={isAutoCertified}
                     onChange={(e) => setAutoChecks(prev => ({ ...prev, tireTread: e.target.checked }))}
-                    className="w-4 h-4 rounded text-[#004f8f] border-slate-300 mt-0.5 focus:ring-[#004f8f]/30"
+                    className="w-4 h-4 rounded text-[#of9d58] border-slate-300 mt-0.5 focus:ring-[#of9d58]/30"
                   />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Tire Tread Depth Tested</span>
@@ -998,7 +998,7 @@ export default function ClaimsPage({
                     checked={autoChecks.dashLight}
                     disabled={isAutoCertified}
                     onChange={(e) => setAutoChecks(prev => ({ ...prev, dashLight: e.target.checked }))}
-                    className="w-4 h-4 rounded text-[#004f8f] border-slate-300 mt-0.5 focus:ring-[#004f8f]/30"
+                    className="w-4 h-4 rounded text-[#of9d58] border-slate-300 mt-0.5 focus:ring-[#of9d58]/30"
                   />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Zero Fault Dashboard Warning Lights</span>
@@ -1013,7 +1013,7 @@ export default function ClaimsPage({
                     checked={autoChecks.mount}
                     disabled={isAutoCertified}
                     onChange={(e) => setAutoChecks(prev => ({ ...prev, mount: e.target.checked }))}
-                    className="w-4 h-4 rounded text-[#004f8f] border-slate-300 mt-0.5 focus:ring-[#004f8f]/30"
+                    className="w-4 h-4 rounded text-[#of9d58] border-slate-300 mt-0.5 focus:ring-[#of9d58]/30"
                   />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Hands-free Phone Mount Installed</span>
@@ -1028,7 +1028,7 @@ export default function ClaimsPage({
                     checked={autoChecks.emergencyKit}
                     disabled={isAutoCertified}
                     onChange={(e) => setAutoChecks(prev => ({ ...prev, emergencyKit: e.target.checked }))}
-                    className="w-4 h-4 rounded text-[#004f8f] border-slate-300 mt-0.5 focus:ring-[#004f8f]/30"
+                    className="w-4 h-4 rounded text-[#of9d58] border-slate-300 mt-0.5 focus:ring-[#of9d58]/30"
                   />
                   <div>
                     <span className="text-xs font-bold text-slate-800 block">Roadside Safety Trunk Kit Loaded</span>
@@ -1041,7 +1041,7 @@ export default function ClaimsPage({
               {!isAutoCertified && (
                 <button
                   onClick={() => handleCertifySafety('auto')}
-                  className="w-full py-3 bg-[#004f8f] hover:bg-[#003c6e] text-white font-bold text-xs rounded-xl shadow-xs transition-colors cursor-pointer"
+                  className="w-full py-3 bg-[#of9d58] hover:bg-[#003c6e] text-white font-bold text-xs rounded-xl shadow-xs transition-colors cursor-pointer"
                 >
                   Certify Safe Driver Audit & Claim $15.00 Credit
                 </button>

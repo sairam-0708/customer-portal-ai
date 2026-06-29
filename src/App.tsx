@@ -130,6 +130,8 @@ export default function App() {
   // Application feedback Toast
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
+  const footerLogoSrc = `${import.meta.env.BASE_URL}shieldguard-logo-white.svg`;
+
 
   // Persist states automatically when changed
   useEffect(() => {
@@ -233,7 +235,7 @@ export default function App() {
 
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 flex flex-col font-sans selection:bg-[#004f8f]/20" id="portal-root">
+    <div className="min-h-screen bg-[#f8fafc] text-slate-800 flex flex-col font-sans selection:bg-[#0f9d58]/20" id="portal-root">
      
       {/* Header and Quick Navigation / Search */}
       <Header
@@ -373,18 +375,18 @@ export default function App() {
 
 
         {/* Bundle Banner */}
-        <div className="bg-[#004f8f] text-white rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md" id="bundle-save-banner">
+        <div className="bg-[#0f9d58] text-white rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md" id="bundle-save-banner">
           <div className="space-y-1 text-center md:text-left">
             <h3 className="text-xl sm:text-2xl font-bold font-sans">
               Bundle and save up to 25%
             </h3>
-            <p className="text-sm text-blue-100 font-sans max-w-lg">
+            <p className="text-sm text-green-100 font-sans max-w-lg">
               Pair two or more policies, like Auto and Home together, and start saving on your premiums today.
             </p>
           </div>
           <button
             onClick={() => setIsBundleModalOpen(true)}
-            className="px-6 py-3.5 bg-white hover:bg-[#e6f0fa] border border-[#bcd3e6] rounded-xl text-[#004f8f] font-bold text-xs sm:text-sm tracking-wide transition-all shadow-md hover:shadow-lg hover:scale-[1.02]"
+            className="px-6 py-3.5 bg-white hover:bg-[#e6f0fa] border border-[#bcd3e6] rounded-xl text-[#0f9d58] font-bold text-xs sm:text-sm tracking-wide transition-all shadow-md hover:shadow-lg hover:scale-[1.02]"
             id="btn-learn-bundles"
           >
             Learn about bundles
@@ -394,13 +396,18 @@ export default function App() {
 
 
       {/* Footer block */}
-      <footer className="w-full bg-[#1a202c] text-slate-400 text-xs py-10 mt-16 border-t border-slate-800" id="portal-footer">
+     <footer className="w-full bg-[#1a202c] text-slate-400 text-xs py-10 mt-16 border-t border-slate-800" id="portal-footer">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <div className="flex flex-col sm:flex-row items-center justify-between border-b border-slate-800 pb-6 gap-4">
             {/* Brand */}
-            <div className="flex items-center space-x-2">
-               <Shield className="w-5 h-5 text-blue-500 fill-blue-500" />
-              <span className="font-bold text-sm tracking-widest text-white uppercase block font-sans">ShieldGuard Insurance</span>
+            <div className="flex items-center space-x-2 bg-transparent">
+              <img
+                src={footerLogoSrc}
+                alt="ShieldGuard logo"
+                width={168}
+                height={48}
+                className="object-contain"
+              />
             </div>
 
 
@@ -416,11 +423,12 @@ export default function App() {
 
           {/* Legal notes */}
           <div className="flex flex-col sm:flex-row items-center justify-between text-slate-500 gap-2">
-            <p>© 2026 ShieldGuard Indemnity Company. All rights reserved.</p>
-            <p className="text-[10px] font-mono">APP-VERSION: 3.1.2 • HOSTED SECURELY</p>
+            <p>© 2026 @valuemomentum. All rights reserved.</p>            
           </div>
         </div>
       </footer>
+
+
 
 
       {/* Dynamic Popups Modals Overlay */}

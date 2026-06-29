@@ -256,8 +256,8 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
   return (
     <div className="space-y-8" id="profile-page-wrapper">
       {/* Page Header */}
-      <div className="border-b border-slate-200 pb-4">
-        <span className="text-xs font-bold tracking-wider text-[#004f8f] block uppercase font-sans">ShieldGuard Account Management</span>
+      <div>
+  <span className="text-xs font-bold tracking-wider text-[#0f9d58] block uppercase font-sans">ShieldGuard Account Management</span>
         <h1 className="text-2xl sm:text-3xl font-sans font-medium text-slate-900 mt-1">My Profile & Settings</h1>
         <p className="text-xs sm:text-sm text-slate-500 font-sans">Configure your communication channels, SMS text enrollments, preferred language, and secure delivery options.</p>
       </div>
@@ -271,12 +271,12 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
           {/* Card: Profile Card */}
           <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-6">
             <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 bg-[#004f8f]/10 rounded-full flex items-center justify-center font-bold text-2xl text-[#004f8f] border-2 border-[#004f8f]/20">
+              <div className="w-16 h-16 bg-[#0f9d58]/10 rounded-full flex items-center justify-center font-bold text-2xl text-[#0f9d58] border-2 border-[#0f9d58]/20">
                 A
               </div>
               <div>
                 <h3 className="font-bold text-lg text-slate-900">{profile.name}</h3>
-                <span className="px-2.5 py-0.5 bg-blue-50 border border-blue-100 rounded-full text-[10px] text-[#004f8f] font-bold uppercase tracking-wider block mt-1 w-max">
+                <span className="px-2.5 py-0.5 bg-green-50 border border-green-100 rounded-full text-[10px] text-[#0f9d58] font-bold uppercase tracking-wider block mt-1 w-max">
                   Policyholder Portal
                 </span>
               </div>
@@ -294,7 +294,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                     type="email"
                     value={emailInput}
                     onChange={(e) => setEmailInput(e.target.value)}
-                    className="w-full bg-slate-50/50 border border-slate-200 rounded-xl pl-9 p-2.5 text-xs font-medium text-slate-800 outline-none focus:bg-white focus:ring-2 focus:ring-[#004f8f] focus:border-transparent"
+                    className="w-full bg-slate-50/50 border border-slate-200 rounded-xl pl-9 p-2.5 text-xs font-medium text-slate-800 outline-none focus:bg-white focus:ring-2 focus:ring-[#0f9d58] focus:border-transparent"
                     required
                   />
                 </div>
@@ -309,7 +309,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                     type="text"
                     value={phoneInput}
                     onChange={(e) => setPhoneInput(e.target.value)}
-                    className="w-full bg-slate-50/50 border border-slate-200 rounded-xl pl-9 p-2.5 text-xs font-medium text-slate-800 outline-none focus:bg-white focus:ring-2 focus:ring-[#004f8f] focus:border-transparent"
+                    className="w-full bg-slate-50/50 border border-slate-200 rounded-xl pl-9 p-2.5 text-xs font-medium text-slate-800 outline-none focus:bg-white focus:ring-2 focus:ring-[#0f9d58] focus:border-transparent"
                     required
                   />
                 </div>
@@ -324,7 +324,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                     rows={2}
                     value={addressInput}
                     onChange={(e) => setAddressInput(e.target.value)}
-                    className="w-full bg-slate-50/50 border border-slate-200 rounded-xl pl-9 p-2.5 text-xs font-medium text-slate-800 outline-none focus:bg-white focus:ring-2 focus:ring-[#004f8f] focus:border-transparent resize-none"
+                    className="w-full bg-slate-50/50 border border-slate-200 rounded-xl pl-9 p-2.5 text-xs font-medium text-slate-800 outline-none focus:bg-white focus:ring-2 focus:ring-[#0f9d58] focus:border-transparent resize-none"
                     required
                   />
                 </div>
@@ -333,7 +333,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
 
               <button
                 type="submit"
-                className="w-full py-2.5 bg-[#004f8f] hover:bg-[#003d70] text-white text-xs font-bold rounded-xl flex items-center justify-center space-x-1.5 transition-colors cursor-pointer"
+                className="w-full py-2.5 bg-[#0f9d58] hover:bg-[#0d8c4a] text-white text-xs font-bold rounded-xl flex items-center justify-center space-x-1.5 transition-colors cursor-pointer shadow-xs"
               >
                 <Save className="w-3.5 h-3.5" />
                 <span>Save Profile Info</span>
@@ -345,7 +345,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
           {/* Card: Language Select */}
           <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-4">
             <div className="flex items-center space-x-2 border-b border-slate-100 pb-2.5">
-              <Globe className="w-4 h-4 text-[#004f8f]" />
+              <Globe className="w-4 h-4 text-[#0f9d58]" />
               <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Language Preference</h4>
             </div>
 
@@ -358,7 +358,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
             <select
               value={profile.language}
               onChange={(e) => handleLanguageChange(e.target.value)}
-              className="w-full bg-white border border-slate-200 rounded-xl p-3 text-xs font-semibold text-slate-700 outline-none focus:ring-2 focus:ring-[#004f8f]"
+              className="w-full bg-white border border-slate-200 rounded-xl p-3 text-xs font-semibold text-slate-700 outline-none focus:ring-2 focus:ring-[#0f9d58]"
             >
               <option value="en">English (US)</option>
               <option value="es">Español (Spanish)</option>
@@ -380,7 +380,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
           <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-5">
             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <div>
-                <h3 className="font-bold text-sm text-slate-900 uppercase tracking-wider">Document Delivery Choices</h3>
+                <h3 className="font-bold text-xs text-slate-900 uppercase tracking-wider">Document Delivery Choices</h3>
                 <p className="text-[11px] text-slate-400">Opt into paperless billing or traditional mail dispatch</p>
               </div>
               <span className="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full uppercase tracking-wider">
@@ -399,13 +399,13 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                 onClick={() => handleDeliveryChange('paperless')}
                 className={`p-4 border rounded-xl text-left flex flex-col justify-between h-28 transition-all hover:scale-[1.01] cursor-pointer ${
                   profile.deliveryChoice === 'paperless'
-                    ? 'border-[#004f8f] bg-blue-50/20 ring-2 ring-[#004f8f]/10'
+                    ? 'border-[#0f9d58] bg-green-50/20 ring-2 ring-[#0f9d58]/10'
                     : 'border-slate-200 hover:bg-slate-50 bg-white'
                 }`}
               >
                 <div className="flex items-center justify-between w-full">
                   <span className="text-xs font-bold text-slate-900">Paperless (Digital)</span>
-                  {profile.deliveryChoice === 'paperless' && <CheckCircle className="w-4.5 h-4.5 text-[#004f8f]" />}
+                  {profile.deliveryChoice === 'paperless' && <CheckCircle className="w-4.5 h-4.5 text-[#0f9d58]" />}
                 </div>
                 <div>
                   <span className="text-[10px] text-slate-400 block mt-1 leading-normal">
@@ -419,13 +419,13 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                 onClick={() => handleDeliveryChange('mail')}
                 className={`p-4 border rounded-xl text-left flex flex-col justify-between h-28 transition-all hover:scale-[1.01] cursor-pointer ${
                   profile.deliveryChoice === 'mail'
-                    ? 'border-[#004f8f] bg-blue-50/20 ring-2 ring-[#004f8f]/10'
+                    ? 'border-[#0f9d58] bg-green-50/20 ring-2 ring-[#0f9d58]/10'
                     : 'border-slate-200 hover:bg-slate-50 bg-white'
                 }`}
               >
                 <div className="flex items-center justify-between w-full">
                   <span className="text-xs font-bold text-slate-900">Physical USPS Mail</span>
-                  {profile.deliveryChoice === 'mail' && <CheckCircle className="w-4.5 h-4.5 text-[#004f8f]" />}
+                  {profile.deliveryChoice === 'mail' && <CheckCircle className="w-4.5 h-4.5 text-[#0f9d58]" />}
                 </div>
                 <div>
                   <span className="text-[10px] text-slate-400 block mt-1 leading-normal">
@@ -439,13 +439,13 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                 onClick={() => handleDeliveryChange('both')}
                 className={`p-4 border rounded-xl text-left flex flex-col justify-between h-28 transition-all hover:scale-[1.01] cursor-pointer ${
                   profile.deliveryChoice === 'both'
-                    ? 'border-[#004f8f] bg-blue-50/20 ring-2 ring-[#004f8f]/10'
+                    ? 'border-[#0f9d58] bg-green-50/20 ring-2 ring-[#0f9d58]/10'
                     : 'border-slate-200 hover:bg-slate-50 bg-white'
                 }`}
               >
                 <div className="flex items-center justify-between w-full">
                   <span className="text-xs font-bold text-slate-900">Hybrid Choice</span>
-                  {profile.deliveryChoice === 'both' && <CheckCircle className="w-4.5 h-4.5 text-[#004f8f]" />}
+                  {profile.deliveryChoice === 'both' && <CheckCircle className="w-4.5 h-4.5 text-[#0f9d58]" />}
                 </div>
                 <div>
                   <span className="text-[10px] text-slate-400 block mt-1 leading-normal">
@@ -460,7 +460,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
           {/* Card: Comms Preferences Matrix */}
           <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-4">
             <div className="border-b border-slate-100 pb-3">
-              <h3 className="font-bold text-sm text-slate-900 uppercase tracking-wider">Communication Channel Preference</h3>
+              <h3 className="font-bold text-xs text-slate-900 uppercase tracking-wider">Communication Channel Preference</h3>
               <p className="text-[11px] text-slate-400">Control channels used for system transactions and alerts</p>
             </div>
 
@@ -486,7 +486,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                         type="checkbox"
                         checked={profile.comms.policy.email}
                         onChange={() => handleCommsToggle('policy', 'email')}
-                        className="w-4 h-4 rounded text-[#004f8f] focus:ring-[#004f8f]/30 border-slate-300"
+                        className="w-4 h-4 rounded text-[#0f9d58] focus:ring-[#0f9d58]/30 border-slate-300"
                       />
                     </td>
                     <td className="py-3 text-center">
@@ -494,7 +494,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                         type="checkbox"
                         checked={profile.comms.policy.sms}
                         onChange={() => handleCommsToggle('policy', 'sms')}
-                        className="w-4 h-4 rounded text-[#004f8f] focus:ring-[#004f8f]/30 border-slate-300"
+                        className="w-4 h-4 rounded text-[#0f9d58] focus:ring-[#0f9d58]/30 border-slate-300"
                       />
                     </td>
                     <td className="py-3 text-center">
@@ -502,7 +502,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                         type="checkbox"
                         checked={profile.comms.policy.push}
                         onChange={() => handleCommsToggle('policy', 'push')}
-                        className="w-4 h-4 rounded text-[#004f8f] focus:ring-[#004f8f]/30 border-slate-300"
+                        className="w-4 h-4 rounded text-[#0f9d58] focus:ring-[#0f9d58]/30 border-slate-300"
                       />
                     </td>
                   </tr>
@@ -518,7 +518,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                         type="checkbox"
                         checked={profile.comms.billing.email}
                         onChange={() => handleCommsToggle('billing', 'email')}
-                        className="w-4 h-4 rounded text-[#004f8f] focus:ring-[#004f8f]/30 border-slate-300"
+                        className="w-4 h-4 rounded text-[#0f9d58] focus:ring-[#0f9d58]/30 border-slate-300"
                       />
                     </td>
                     <td className="py-3 text-center">
@@ -526,7 +526,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                         type="checkbox"
                         checked={profile.comms.billing.sms}
                         onChange={() => handleCommsToggle('billing', 'sms')}
-                        className="w-4 h-4 rounded text-[#004f8f] focus:ring-[#004f8f]/30 border-slate-300"
+                        className="w-4 h-4 rounded text-[#0f9d58] focus:ring-[#0f9d58]/30 border-slate-300"
                       />
                     </td>
                     <td className="py-3 text-center">
@@ -534,7 +534,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                         type="checkbox"
                         checked={profile.comms.billing.push}
                         onChange={() => handleCommsToggle('billing', 'push')}
-                        className="w-4 h-4 rounded text-[#004f8f] focus:ring-[#004f8f]/30 border-slate-300"
+                        className="w-4 h-4 rounded text-[#0f9d58] focus:ring-[#0f9d58]/30 border-slate-300"
                       />
                     </td>
                   </tr>
@@ -550,7 +550,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                         type="checkbox"
                         checked={profile.comms.safety.email}
                         onChange={() => handleCommsToggle('safety', 'email')}
-                        className="w-4 h-4 rounded text-[#004f8f] focus:ring-[#004f8f]/30 border-slate-300"
+                        className="w-4 h-4 rounded text-[#0f9d58] focus:ring-[#0f9d58]/30 border-slate-300"
                       />
                     </td>
                     <td className="py-3 text-center">
@@ -558,7 +558,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                         type="checkbox"
                         checked={profile.comms.safety.sms}
                         onChange={() => handleCommsToggle('safety', 'sms')}
-                        className="w-4 h-4 rounded text-[#004f8f] focus:ring-[#004f8f]/30 border-slate-300"
+                        className="w-4 h-4 rounded text-[#0f9d58] focus:ring-[#0f9d58]/30 border-slate-300"
                       />
                     </td>
                     <td className="py-3 text-center">
@@ -566,7 +566,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                         type="checkbox"
                         checked={profile.comms.safety.push}
                         onChange={() => handleCommsToggle('safety', 'push')}
-                        className="w-4 h-4 rounded text-[#004f8f] focus:ring-[#004f8f]/30 border-slate-300"
+                        className="w-4 h-4 rounded text-[#0f9d58] focus:ring-[#0f9d58]/30 border-slate-300"
                       />
                     </td>
                   </tr>
@@ -579,7 +579,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
           {/* Card: Text Enrolment (SMS Option) */}
           <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-4">
             <div className="flex items-center space-x-2 border-b border-slate-100 pb-2.5">
-              <Smartphone className="w-5 h-5 text-[#004f8f]" />
+              <Smartphone className="w-5 h-5 text-[#0f9d58]" />
               <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">SMS Text Enrolment Dashboard</h4>
             </div>
 
@@ -622,7 +622,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-4"
+                  className="bg-slate-50/50 border border-slate-200/80 rounded-2xl p-4 space-y-4"
                 >
                   {verificationStep === 'idle' && (
                     <div className="space-y-3">
@@ -632,11 +632,11 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                           placeholder="Enter cell number: e.g. (410) 555-8941"
                           value={enteredPhone}
                           onChange={(e) => setEnteredPhone(e.target.value)}
-                          className="flex-1 bg-white border border-slate-200 rounded-xl p-2.5 text-xs font-medium text-slate-800 outline-none focus:ring-2 focus:ring-[#004f8f]"
+                          className="flex-1 bg-white border border-slate-200 rounded-xl p-2.5 text-xs font-medium text-slate-800 outline-none focus:ring-2 focus:ring-[#0f9d58] focus:border-transparent placeholder:text-slate-400"
                         />
                         <button
                           onClick={handleStartSmsEnrollment}
-                          className="px-5 py-2.5 bg-[#004f8f] text-white font-bold text-xs rounded-xl hover:bg-[#003d70] transition-colors cursor-pointer"
+                          className="px-5 py-2.5 bg-[#0f9d58] text-white font-bold text-xs rounded-xl hover:bg-[#0d8c4d] transition-colors cursor-pointer shadow-xs"
                         >
                           Enrol Handset
                         </button>
@@ -650,7 +650,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
 
                   {verificationStep === 'sending' && (
                     <div className="p-4 text-center space-y-1.5">
-                      <div className="w-5 h-5 border-2 border-[#004f8f] border-t-transparent rounded-full animate-spin mx-auto" />
+                      <div className="w-5 h-5 border-2 border-[#0f9d58] border-t-transparent rounded-full animate-spin mx-auto" />
                       <p className="text-xs text-slate-600 font-medium">Transmitting verification passcode securely...</p>
                     </div>
                   )}
@@ -658,7 +658,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
 
                   {verificationStep === 'pending_pin' && (
                     <div className="space-y-4">
-                      <div className="bg-blue-50/60 border border-blue-100 p-3 rounded-xl flex items-center space-x-2.5 text-xs text-[#004f8f] leading-snug">
+                      <div className="bg-blue-50/60 border border-blue-100 p-3 rounded-xl flex items-center space-x-2.5 text-xs text-[#0f9d58] leading-snug">
                         <AlertCircle className="w-4 h-4 shrink-0" />
                         <span>A 6-digit verification code was sent to <strong className="font-mono">{enteredPhone}</strong>. Check your messaging application.</span>
                       </div>
@@ -671,7 +671,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                           placeholder="6-digit PIN (e.g. 123456)"
                           value={enteredPin}
                           onChange={(e) => { setEnteredPin(e.target.value); setPinError(false); }}
-                          className={`flex-1 bg-white border rounded-xl p-2.5 text-center tracking-widest font-mono font-bold text-sm outline-none focus:ring-2 focus:ring-[#004f8f] ${
+                          className={`flex-1 bg-white border rounded-xl p-2.5 text-center tracking-widest font-mono font-bold text-sm outline-none focus:ring-2 focus:ring-[#0f9d58] ${
                             pinError ? 'border-red-400 focus:ring-red-500' : 'border-slate-200'
                           }`}
                         />
@@ -693,7 +693,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                         </button>
                         <button
                           onClick={handleStartSmsEnrollment}
-                          className="text-[#004f8f] hover:underline font-semibold"
+                          className="text-[#0f9d58] hover:underline font-semibold"
                         >
                           Resend Code
                         </button>
@@ -712,7 +712,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
           <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-4">
             <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
               <div className="flex items-center space-x-2">
-                <ShieldCheck className="w-5 h-5 text-[#004f8f]" />
+                <ShieldCheck className="w-5 h-5 text-[#0f9d58]" />
                 <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider font-sans">Roadside Safety Assistance (RSA) Option</h4>
               </div>
               <span className={`px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider ${
@@ -737,7 +737,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                 <button
                   type="button"
                   onClick={handleToggleRsa}
-                  className="px-4 py-2 bg-[#004f8f] hover:bg-[#003c6e] text-white font-bold text-xs rounded-xl transition-all cursor-pointer"
+                  className="px-4 py-2 bg-[#0f9d58] hover:bg-[#0d8c4d] text-white font-bold text-xs rounded-xl transition-all cursor-pointer"
                 >
                   Enroll in RSA Coverage
                 </button>
@@ -767,7 +767,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                     <button
                       type="button"
                       onClick={handleTriggerDispatch}
-                      className="w-full py-2.5 bg-[#004f8f] text-white hover:bg-[#003d70] font-bold text-xs rounded-xl flex items-center justify-center space-x-1 transition-all cursor-pointer shadow-xs"
+                      className="w-full py-2.5 bg-[#0f9d58] text-white hover:bg-[#003d70] font-bold text-xs rounded-xl flex items-center justify-center space-x-1 transition-all cursor-pointer shadow-xs"
                     >
                       <span>Emergency Roadside Request (GPS Dispatch)</span>
                     </button>
@@ -782,7 +782,7 @@ export default function ProfilePage({ showToast }: ProfilePageProps) {
                       <span>{rsaProgress}%</span>
                     </div>
                     <div className="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                      <div className="bg-[#004f8f] h-full transition-all duration-300" style={{ width: `${rsaProgress}%` }}></div>
+                      <div className="bg-[#0f9d58] h-full transition-all duration-300" style={{ width: `${rsaProgress}%` }}></div>
                     </div>
                   </div>
                 )}
