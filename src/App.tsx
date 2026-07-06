@@ -413,10 +413,40 @@ export default function App() {
 
             {/* Links */}
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-slate-400">
-              <a href="#privacy" onClick={(e) => { e.preventDefault(); showToast("Displaying Privacy Policy statements."); }} className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#terms" onClick={(e) => { e.preventDefault(); showToast("Displaying Terms of Service."); }} className="hover:text-white transition-colors">Terms of Use</a>
-              <a href="#accessibility" onClick={(e) => { e.preventDefault(); showToast("Displaying Accessibility resources."); }} className="hover:text-white transition-colors">Accessibility</a>
-              <a href="#contact" onClick={(e) => { e.preventDefault(); showToast(`Contacting headquarters support desk at 1-800-458-0811.`); }} className="hover:text-white transition-colors">Contact Us</a>
+              <a
+                href="https://publish-p169157-e2027173.adobeaemcloud.com/us/en/home/privacypolicy.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Privacy Policy
+              </a>
+
+              <a
+                href="https://publish-p169157-e2027173.adobeaemcloud.com/us/en/home/termsofservice.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Terms of use
+              </a>
+
+              <a
+                href="https://publish-p169157-e2027173.adobeaemcloud.com/us/en/home/cookiepolicy.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Cookie Policy
+              </a>
+              <a
+                href="https://publish-p169157-e2027173.adobeaemcloud.com/us/en/home/contactus.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Contact Us
+              </a>
             </div>
           </div>
 
