@@ -94,7 +94,7 @@ export default function Header({
           >
             <div className="p-1.5 flex items-center justify-center overflow-hidden rounded-md bg-transparent">
               <img
-                src="https://publish-p169157-e2027173.adobeaemcloud.com/content/dam/ShieldGuard/ShieldGuard%20Modified%20Logo.png"
+                src="https://publish-p169157-e2027173.adobeaemcloud.com/content/dam/ShieldGuard/shieldguard_logo.png"
                 alt="ShieldGuard logo"
                 width={168}
                 height={48}
