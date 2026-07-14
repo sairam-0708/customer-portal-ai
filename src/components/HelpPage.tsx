@@ -178,7 +178,7 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
     <div className="space-y-8" id="help-center-wrapper">
       {/* 1. Page Header */}
       <div>
-        <span className="text-xs font-bold tracking-wider text-[#0f9d58] block uppercase font-sans">ShieldGuard Care Portal</span>
+        <span className="text-xs font-bold tracking-wider text-[var(--app-primary)] block uppercase font-sans">ShieldGuard Care Portal</span>
         <h1 className="text-2xl sm:text-3xl font-sans font-medium text-slate-900 mt-1">Customer Help Center</h1>
         <p className="text-xs sm:text-sm text-slate-500 font-sans">Browse helpful guides, search common FAQs, or chat with our digital assistant</p>
       </div>
@@ -191,7 +191,7 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
           <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs">
             <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-5">
               <h3 className="font-bold text-base text-slate-950 font-sans">ShieldGuard FAQ Directory</h3>
-              <HelpCircle className="w-4 h-4 text-[#0f9d58]" />
+              <HelpCircle className="w-4 h-4 text-[var(--app-primary)]" />
             </div>
 
             {/* FAQ Search */}
@@ -201,7 +201,7 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
                 placeholder="Search FAQs (e.g. deductible, auto-pay)..."
                 value={faqSearch}
                 onChange={(e) => setFaqSearch(e.target.value)}
-                className="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs placeholder-slate-400 outline-none focus:ring-2 focus:ring-[#0f9d58]"
+                className="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs placeholder-slate-400 outline-none focus:ring-2 focus:ring-[var(--app-primary)]"
               />
               <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3.5 top-3" />
             </div>
@@ -253,21 +253,21 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
           {/* Quick Contacts Panel */}
           <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div className="space-y-1">
-              <Phone className="w-5 h-5 text-[#0f9d58]" />
+              <Phone className="w-5 h-5 text-[var(--app-primary)]" />
               <h4 className="text-xs font-bold text-slate-900 pt-1">Call ShieldGuard Support</h4>
               <p className="text-[11px] text-slate-400 leading-snug">Available 24/7 for urgent road towing claims.</p>
-              <span className="text-xs font-bold text-[#0f9d58] block pt-1">1-800-458-0811</span>
+              <span className="text-xs font-bold text-[var(--app-primary)] block pt-1">1-800-458-0811</span>
             </div>
 
             <div className="space-y-1 border-t sm:border-t-0 sm:border-l border-slate-100 pt-4 sm:pt-0 sm:pl-4">
-              <Mail className="w-5 h-5 text-[#0f9d58]" />
+              <Mail className="w-5 h-5 text-[var(--app-primary)]" />
               <h4 className="text-xs font-bold text-slate-900 pt-1">Email headquarters</h4>
               <p className="text-[11px] text-slate-400 leading-snug">Average reply time is 2 business days.</p>
-              <span className="text-xs font-bold text-[#0f9d58] block pt-1">support@shieldguard.com</span>
+              <span className="text-xs font-bold text-[var(--app-primary)] block pt-1">support@shieldguard.com</span>
             </div>
 
             <div className="space-y-1 border-t sm:border-t-0 sm:border-l border-slate-100 pt-4 sm:pt-0 sm:pl-4">
-              <MapPin className="w-5 h-5 text-[#0f9d58]" />
+              <MapPin className="w-5 h-5 text-[var(--app-primary)]" />
               <h4 className="text-xs font-bold text-slate-900 pt-1">Visit ShieldGuard Indemnity</h4>
               <p className="text-[11px] text-slate-400 leading-snug">Official corporate head office grounds.</p>
               <span className="text-xs font-bold text-slate-700 block pt-1">Baltimore, Maryland, USA</span>
@@ -278,7 +278,7 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
         {/* Right Side (AI Concierge Chat Widget - 5 cols) */}
         <div className="lg:col-span-5 bg-white border border-slate-200/80 rounded-2xl shadow-xs overflow-hidden h-[480px] flex flex-col justify-between" id="ai-chat-widget">
           {/* Concierge Header */}
-          <div className="bg-[#0f9d58] p-4 text-white flex items-center justify-between">
+          <div className="bg-[var(--app-primary)] p-4 text-white flex items-center justify-between">
             <div className="flex items-center space-x-2.5">
               <div className="p-1.5 bg-white/10 rounded-lg">
                 <Sparkles className="w-4 h-4 text-white" />
@@ -300,7 +300,7 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
               return (
                 <div key={msg.id} className={`flex items-start gap-2.5 max-w-[85%] ${isBot ? '' : 'ml-auto flex-row-reverse'}`}>
                   {isBot ? (
-                    <div className="w-7 h-7 bg-slate-100 text-[#0f9d58] rounded-full flex items-center justify-center shrink-0">
+                    <div className="w-7 h-7 bg-slate-100 text-[var(--app-primary)] rounded-full flex items-center justify-center shrink-0">
                       <Sparkles className="w-3.5 h-3.5" />
                     </div>
                   ) : (
@@ -311,7 +311,7 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
 
                   <div className="space-y-1">
                     <div className={`p-3 rounded-2xl text-xs leading-relaxed ${
-                      isBot ? 'bg-white border border-slate-200/60 text-slate-800' : 'bg-[#0f9d58] text-white'
+                      isBot ? 'bg-white border border-slate-200/60 text-slate-800' : 'bg-[var(--app-primary)] text-white'
                     }`}>
                       {msg.text}
                     </div>
@@ -323,7 +323,7 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
 
             {isBotTyping && (
               <div className="flex items-start gap-2.5 max-w-[85%]">
-                <div className="w-7 h-7 bg-slate-100 text-[#0f9d58] rounded-full flex items-center justify-center shrink-0">
+                <div className="w-7 h-7 bg-slate-100 text-[var(--app-primary)] rounded-full flex items-center justify-center shrink-0">
                   <Sparkles className="w-3.5 h-3.5 animate-pulse" />
                 </div>
                 <div className="p-3 bg-white border border-slate-200/60 rounded-2xl flex items-center space-x-1.5 h-8">
@@ -343,12 +343,12 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
               placeholder="Ask about deductible, premiums, agent..."
               value={chatInput}
               onChange={(e) => setChatInput(e.target.value)}
-              className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-3 text-xs outline-none focus:ring-2 focus:ring-[#0f9d58] h-9"
+              className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-3 text-xs outline-none focus:ring-2 focus:ring-[var(--app-primary)] h-9"
             />
             <button
               type="submit"
               disabled={!chatInput.trim()}
-              className="w-9 h-9 bg-[#0f9d58] disabled:bg-slate-200 hover:bg-[#0b8043] text-white rounded-xl flex items-center justify-center transition-colors shrink-0"
+              className="w-9 h-9 bg-[var(--app-primary)] disabled:bg-slate-200 hover:bg-[var(--app-primary-hover)] text-white rounded-xl flex items-center justify-center transition-colors shrink-0"
             >
               <Send className="w-4 h-4" />
             </button>
@@ -360,7 +360,7 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
       {/* 3. Message Local Agent Form section */}
       <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs max-w-3xl">
         <div className="flex items-center space-x-2 border-b border-slate-100 pb-3 mb-5">
-          <Mail className="w-5 h-5 text-[#0f9d58]" />
+          <Mail className="w-5 h-5 text-[var(--app-primary)]" />
           <h3 className="font-sans font-bold text-base text-slate-900">Secure Dispatch to Agent {agent.name}</h3>
         </div>
 
@@ -409,7 +409,7 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
               value={agentMsgBody}
               onChange={(e) => setAgentMsgBody(e.target.value)}
               rows={4}
-              className="w-full bg-white border border-slate-300 rounded-xl p-3 text-xs placeholder-slate-400 outline-none focus:ring-2 focus:ring-[#0f9d58] font-sans"
+              className="w-full bg-white border border-slate-300 rounded-xl p-3 text-xs placeholder-slate-400 outline-none focus:ring-2 focus:ring-[var(--app-primary)] font-sans"
             />
           </div>
 
@@ -422,7 +422,7 @@ export default function HelpPage({ policies, agent, showToast }: HelpPageProps) 
             <button
               type="submit"
               disabled={isSendingMsg || !agentMsgBody.trim()}
-              className="px-5 py-2.5 bg-[#0f9d58] disabled:bg-slate-200 hover:bg-[#0b8043] text-white text-xs font-bold rounded-xl transition-colors shadow-xs flex items-center gap-1.5"
+              className="px-5 py-2.5 bg-[var(--app-primary)] disabled:bg-slate-200 hover:bg-[var(--app-primary-hover)] text-white text-xs font-bold rounded-xl transition-colors shadow-xs flex items-center gap-1.5"
             >
               {isSendingMsg ? (
                 <>

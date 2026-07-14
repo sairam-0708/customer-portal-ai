@@ -124,7 +124,7 @@ export default function Header({
                   {isActive && (
                     <motion.div
                       layoutId="activeNavIndicator"
-                      className="absolute bottom-0 left-0 right-0 h-1 bg-[#0f9d58]"
+                      className="absolute bottom-0 left-0 right-0 h-1 bg-[var(--app-primary)]"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -141,11 +141,11 @@ export default function Header({
             <div className="relative">
               <button
                 onClick={() => setIsBellOpen(!isBellOpen)}
-                className="p-2 hover:bg-[#e6f4ea] rounded-full transition-colors relative cursor-pointer"
+                className="p-2 hover:bg-[var(--app-primary-soft)] rounded-full transition-colors relative cursor-pointer"
                 id="header-bell-btn"
                 aria-label="View notifications"
               >
-                <Bell className="w-5 h-5 text-slate-500 hover:text-[#0f9d58]" />
+                <Bell className="w-5 h-5 text-slate-500 hover:text-[var(--app-primary)]" />
                 {unreadCount > 0 && (
                   <span className="absolute top-1 right-1 bg-red-500 text-white font-sans text-[9px] font-black w-4.5 h-4.5 rounded-full flex items-center justify-center animate-pulse border-2 border-white">
                     {unreadCount}
@@ -172,13 +172,13 @@ export default function Header({
                       {/* Popover Header */}
                       <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50">
                         <div className="flex items-center space-x-1.5">
-                          <Bell className="w-4 h-4 text-[#0f9d58]" />
+                          <Bell className="w-4 h-4 text-[var(--app-primary)]" />
                           <span className="font-bold text-xs tracking-wider text-slate-800 uppercase">Alerts & Notifications</span>
                         </div>
                         {unreadCount > 0 && (
                           <button
                             onClick={() => { onMarkAllAsRead(); setIsBellOpen(false); }}
-                            className="text-[11px] text-[#0f9d58] hover:underline font-semibold"
+                            className="text-[11px] text-[var(--app-primary)] hover:underline font-semibold"
                           >
                             Mark all read
                           </button>
@@ -205,7 +205,7 @@ export default function Header({
                               >
                                 {/* Unread indicator dot */}
                                 {!notif.read && (
-                                  <span className="absolute left-2.5 top-4.5 w-1.5 h-1.5 bg-[#0f9d58] rounded-full" />
+                                  <span className="absolute left-2.5 top-4.5 w-1.5 h-1.5 bg-[var(--app-primary)] rounded-full" />
                                 )}
                                
                                 {/* Severity Icon */}
@@ -244,7 +244,7 @@ export default function Header({
                                   {!notif.read && (
                                     <button
                                       onClick={() => onMarkAsRead(notif.id)}
-                                      className="text-[10px] text-[#0f9d58] hover:underline font-semibold pt-1 block"
+                                      className="text-[10px] text-[var(--app-primary)] hover:underline font-semibold pt-1 block"
                                     >
                                       Mark as read
                                     </button>
@@ -261,7 +261,7 @@ export default function Header({
                       <div className="p-3 text-center border-t border-slate-100 bg-slate-50">
                         <button
                           onClick={() => { setCurrentTab('profile'); setIsBellOpen(false); }}
-                          className="text-xs text-[#0f9d58] hover:underline font-bold flex items-center justify-center mx-auto"
+                          className="text-xs text-[var(--app-primary)] hover:underline font-bold flex items-center justify-center mx-auto"
                         >
                           Configure Alert Preferences <ChevronRight className="w-3 h-3 ml-0.5" />
                         </button>
@@ -281,7 +281,7 @@ export default function Header({
             </span>
             <div
               onClick={() => setCurrentTab('profile')}
-              className={`w-9 h-9 bg-[#e6f4ea] hover:bg-[#d8eadf] text-[#0f9d58] cursor-pointer rounded-full flex items-center justify-center font-bold text-sm border border-[#b7dfc2] transition-all ${
+              className={`w-9 h-9 bg-[var(--app-primary-soft)] hover:bg-[var(--app-primary-soft-hover)] text-[var(--app-primary)] cursor-pointer rounded-full flex items-center justify-center font-bold text-sm border border-[var(--app-border-strong)] transition-all ${
                 currentTab === 'profile' ? 'border-white scale-105' : 'border-blue-400/50'
               }`}
               title="Go to My Profile"
@@ -313,7 +313,7 @@ export default function Header({
 
           {/* Interactive Search Bar */}
           <div className="mt-6 max-w-xl mx-auto relative" id="search-container">
-            <div className="relative rounded-full shadow-sm bg-white border border-slate-300 overflow-hidden flex items-center transition-all focus-within:ring-2 focus-within:ring-[#0f9d58] focus-within:border-transparent">
+            <div className="relative rounded-full shadow-sm bg-white border border-slate-300 overflow-hidden flex items-center transition-all focus-within:ring-2 focus-within:ring-[var(--app-primary)] focus-within:border-transparent">
               <input
                 type="text"
                 placeholder="Search policies, claims, documents..."
@@ -341,7 +341,7 @@ export default function Header({
                   <span>Filtering dashboard for: <strong className="text-slate-900">"{searchQuery}"</strong></span>
                   <button
                     onClick={() => { setSearchQuery(''); onSearch(''); }}
-                    className="text-[#0f9d58] hover:underline font-semibold"
+                    className="text-[var(--app-primary)] hover:underline font-semibold"
                   >
                     Clear Filter
                   </button>
@@ -355,34 +355,34 @@ export default function Header({
           <div className="mt-5 flex flex-wrap justify-center gap-2 sm:gap-3" id="quick-actions-bar">
             <button
               onClick={onFileClaim}
-              className="px-4 py-2 bg-white hover:bg-[#e6f4ea] border border-[#b7dfc2] rounded-full text-xs font-semibold text-[#0f9d58] transition-all flex items-center space-x-1.5 shadow-xs hover:shadow-md"
+              className="px-4 py-2 bg-white hover:bg-[var(--app-primary-soft)] border border-[var(--app-border-strong)] rounded-full text-xs font-semibold text-[var(--app-primary)] transition-all flex items-center space-x-1.5 shadow-xs hover:shadow-md"
               id="qa-file-claim"
             >
-              <FileText className="w-3.5 h-3.5 text-[#0f9d58]" />
+              <FileText className="w-3.5 h-3.5 text-[var(--app-primary)]" />
               <span>File a claim</span>
             </button>
             <button
               onClick={onMakePayment}
-              className="px-4 py-2 bg-white hover:bg-[#e6f0fa] border border-[#bcd3e6] rounded-full text-xs font-semibold text-[#0f9d58] transition-all flex items-center space-x-1.5 shadow-xs hover:shadow-md"
+              className="px-4 py-2 bg-white hover:bg-[var(--app-accent-soft)] border border-[var(--app-accent-border)] rounded-full text-xs font-semibold text-[var(--app-primary)] transition-all flex items-center space-x-1.5 shadow-xs hover:shadow-md"
               id="qa-make-payment"
             >
-              <CreditCard className="w-3.5 h-3.5 text-[#0f9d58]" />
+              <CreditCard className="w-3.5 h-3.5 text-[var(--app-primary)]" />
               <span>Make a payment</span>
             </button>
             <button
               onClick={onViewPolicies}
-              className="px-4 py-2 bg-white hover:bg-[#e6f0fa] border border-[#bcd3e6] rounded-full text-xs font-semibold text-[#0f9d58] transition-all flex items-center space-x-1.5 shadow-xs hover:shadow-md"
+              className="px-4 py-2 bg-white hover:bg-[var(--app-accent-soft)] border border-[var(--app-accent-border)] rounded-full text-xs font-semibold text-[var(--app-primary)] transition-all flex items-center space-x-1.5 shadow-xs hover:shadow-md"
               id="qa-view-policies"
             >
-              <Layers className="w-3.5 h-3.5 text-[#0f9d58]" />
+              <Layers className="w-3.5 h-3.5 text-[var(--app-primary)]" />
               <span>View my policies</span>
             </button>
             <button
               onClick={onDownloadIdCard}
-              className="px-4 py-2 bg-white hover:bg-[#e6f0fa] border border-[#bcd3e6] rounded-full text-xs font-semibold text-[#0f9d58] transition-all flex items-center space-x-1.5 shadow-xs hover:shadow-md"
+              className="px-4 py-2 bg-white hover:bg-[var(--app-accent-soft)] border border-[var(--app-accent-border)] rounded-full text-xs font-semibold text-[var(--app-primary)] transition-all flex items-center space-x-1.5 shadow-xs hover:shadow-md"
               id="qa-download-id"
             >
-              <Download className="w-3.5 h-3.5 text-[#0f9d58]" />
+              <Download className="w-3.5 h-3.5 text-[var(--app-primary)]" />
               <span>Download ID card</span>
             </button>
           </div>

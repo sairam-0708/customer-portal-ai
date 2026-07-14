@@ -128,7 +128,7 @@ export default function PaymentModal({
                         Paying with Card
                       </span>
                       <span className="font-semibold text-slate-700 flex items-center gap-1.5 font-sans text-sm">
-                        <CreditCard className="w-4 h-4 text-[#0f9d58]" />
+                        <CreditCard className="w-4 h-4 text-[var(--app-primary)]" />
                         {paymentMethod.type} •••• {paymentMethod.last4}
                       </span>
                     </div>
@@ -185,7 +185,7 @@ export default function PaymentModal({
                 </div>
                 <button
                   onClick={onClose}
-                  className="py-2.5 px-5 bg-[#0f9d58] text-white rounded-lg text-xs font-semibold"
+                  className="py-2.5 px-5 bg-[var(--app-primary)] text-white rounded-lg text-xs font-semibold"
                 >
                   Close Window
                 </button>
@@ -226,7 +226,7 @@ export default function PaymentModal({
                     <select
                       value={cardBrand}
                       onChange={(e) => setCardBrand(e.target.value)}
-                      className="w-full border border-slate-300 rounded-lg py-2 px-3 bg-white text-slate-800 text-sm focus:ring-2 focus:ring-[#0f9d58] focus:border-transparent outline-none"
+                      className="w-full border border-slate-300 rounded-lg py-2 px-3 bg-white text-slate-800 text-sm focus:ring-2 focus:ring-[var(--app-primary)] focus:border-transparent outline-none"
                     >
                       <option>Visa</option>
                       <option>Mastercard</option>
@@ -246,7 +246,7 @@ export default function PaymentModal({
                       maxLength={19}
                       value={cardNumber}
                       onChange={(e) => setCardNumber(e.target.value)}
-                      className="w-full border border-slate-300 rounded-lg py-2.5 px-3 bg-white text-slate-800 text-sm focus:ring-2 focus:ring-[#0f9d58] focus:border-transparent outline-none font-mono"
+                      className="w-full border border-slate-300 rounded-lg py-2.5 px-3 bg-white text-slate-800 text-sm focus:ring-2 focus:ring-[var(--app-primary)] focus:border-transparent outline-none font-mono"
                       required
                     />
                   </div>
@@ -276,7 +276,7 @@ export default function PaymentModal({
                     </button>
                     <button
                       type="submit"
-                      className="py-2.5 px-5 bg-[#0f9d58] hover:bg-[#0b8043] text-white rounded-lg text-xs font-semibold transition-all shadow-md"
+                      className="py-2.5 px-5 bg-[var(--app-primary)] hover:bg-[var(--app-primary-hover)] text-white rounded-lg text-xs font-semibold transition-all shadow-md"
                     >
                       Save Changes
                     </button>

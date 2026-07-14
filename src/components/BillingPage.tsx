@@ -93,7 +93,7 @@ export default function BillingPage({
     <div className="space-y-8" id="billing-page-wrapper">
       {/* 1. Page Header */}
       <div>
-        <span className="text-xs font-bold tracking-wider text-[#0f9d58] block uppercase font-sans">Premium Management</span>
+        <span className="text-xs font-bold tracking-wider text-[var(--app-primary)] block uppercase font-sans">Premium Management</span>
         <h1 className="text-2xl sm:text-3xl font-sans font-medium text-slate-900 mt-1">Billing & Premium Invoices</h1>
         <p className="text-xs sm:text-sm text-slate-500 font-sans">Verify payment records, update drafting credentials, and review invoices</p>
       </div>
@@ -117,7 +117,7 @@ export default function BillingPage({
         <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
           <span className="text-xs font-semibold text-slate-400 block tracking-wider uppercase">Drafting Card</span>
           <span className="text-sm font-bold text-slate-800 flex items-center gap-1.5 mt-2">
-            <CreditCard className="w-4 h-4 text-[#0f9d58]" />
+            <CreditCard className="w-4 h-4 text-[var(--app-primary)]" />
             {paymentMethod.type} •••• {paymentMethod.last4}
           </span>
           <div className="flex items-center gap-1.5 mt-1.5">
@@ -135,13 +135,13 @@ export default function BillingPage({
           <div className="flex gap-2 mt-2">
             <button
               onClick={() => onMakePayment('auto', actualAuto)}
-              className="flex-1 py-1.5 text-center bg-[#0f9d58] text-white text-[10px] font-bold rounded-lg hover:bg-[#0b8043] transition-colors"
+              className="flex-1 py-1.5 text-center bg-[var(--app-primary)] text-white text-[10px] font-bold rounded-lg hover:bg-[var(--app-primary-hover)] transition-colors"
             >
               Pay Auto
             </button>
             <button
               onClick={() => onMakePayment('home', actualHome)}
-              className="flex-1 py-1.5 text-center bg-[#0f9d58] text-white text-[10px] font-bold rounded-lg hover:bg-[#0b8043] transition-colors"
+              className="flex-1 py-1.5 text-center bg-[var(--app-primary)] text-white text-[10px] font-bold rounded-lg hover:bg-[var(--app-primary-hover)] transition-colors"
             >
               Pay Home
             </button>
@@ -187,7 +187,7 @@ export default function BillingPage({
                 </button>
                 <button
                   onClick={() => onMakePayment('auto', actualAuto)}
-                  className="flex-1 py-2 text-center bg-white hover:bg-slate-50 border border-slate-200 text-[#0f9d58] text-[11px] font-bold rounded-lg transition-colors"
+                  className="flex-1 py-2 text-center bg-white hover:bg-slate-50 border border-slate-200 text-[var(--app-primary)] text-[11px] font-bold rounded-lg transition-colors"
                 >
                   Pay Now
                 </button>
@@ -225,7 +225,7 @@ export default function BillingPage({
                 </button>
                 <button
                   onClick={() => onMakePayment('home', actualHome)}
-                  className="flex-1 py-2 text-center bg-white hover:bg-slate-50 border border-slate-200 text-[#0f9d58] text-[11px] font-bold rounded-lg transition-colors"
+                  className="flex-1 py-2 text-center bg-white hover:bg-slate-50 border border-slate-200 text-[var(--app-primary)] text-[11px] font-bold rounded-lg transition-colors"
                 >
                   Pay Now
                 </button>
@@ -300,7 +300,7 @@ export default function BillingPage({
                         <td className="py-3.5 px-4 text-right">
                           <button
                             onClick={() => setSelectedReceipt({ record: p, policyName: p.policyName, policyNumber: p.policyNum })}
-                            className="text-[#0f9d58] hover:underline font-bold text-xs flex items-center justify-end ml-auto gap-1"
+                            className="text-[var(--app-primary)] hover:underline font-bold text-xs flex items-center justify-end ml-auto gap-1"
                           >
                             <FileText className="w-3.5 h-3.5" />
                             <span>View Statement</span>
@@ -321,7 +321,7 @@ export default function BillingPage({
           <div className="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-xs">
             <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
               <h4 className="font-bold text-sm text-slate-900">Premium Allocation Fund</h4>
-              <Percent className="w-4 h-4 text-[#0f9d58]" />
+              <Percent className="w-4 h-4 text-[var(--app-primary)]" />
             </div>
             
             <p className="text-xs text-slate-500 mb-4">
@@ -336,7 +336,7 @@ export default function BillingPage({
                   <span>52%</span>
                 </div>
                 <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                  <div className="bg-[#0f9d58] h-full w-[52%]"></div>
+                  <div className="bg-[var(--app-primary)] h-full w-[52%]"></div>
                 </div>
               </div>
 
@@ -374,15 +374,15 @@ export default function BillingPage({
               </div>
             </div>
 
-            <div className="mt-5 p-3 bg-[#e6f4ea] border border-slate-200 rounded-xl flex gap-2 text-[10px] text-slate-600">
-              <Info className="w-3.5 h-3.5 text-[#0f9d58] shrink-0" />
+            <div className="mt-5 p-3 bg-[var(--app-primary-soft)] border border-slate-200 rounded-xl flex gap-2 text-[10px] text-slate-600">
+              <Info className="w-3.5 h-3.5 text-[var(--app-primary)] shrink-0" />
               <span>Deductibles apply on a per-incident base and are subtracted from final claims paychecks.</span>
             </div>
           </div>
 
           {/* Secure Guarantee */}
           <div className="p-5 border border-slate-200/80 rounded-2xl bg-slate-50 space-y-3 text-center">
-            <ShieldCheck className="w-8 h-8 text-[#0f9d58] mx-auto" />
+            <ShieldCheck className="w-8 h-8 text-[var(--app-primary)] mx-auto" />
             <h5 className="text-xs font-bold text-slate-800">ShieldGuard Secure Drafting Shield</h5>
             <p className="text-[11px] text-slate-500 leading-relaxed">
               Your payments are processed with standard Bank-level AES 256-bit encryption. Drafting will show on your bank statement as "SHIELDGUARD INDEMNITY PREMIUM PULL".
@@ -403,7 +403,7 @@ export default function BillingPage({
               className="bg-white border border-slate-300 rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl relative"
             >
               {/* Header */}
-              <div className="bg-[#0f9d58] text-white p-5 flex items-center justify-between">
+              <div className="bg-[var(--app-primary)] text-white p-5 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-5 h-5 text-white" />
                   <span className="font-bold text-xs uppercase tracking-wider">ShieldGuard Statement Invoice</span>
@@ -486,7 +486,7 @@ export default function BillingPage({
                 </button>
                 <button
                   onClick={() => setSelectedReceipt(null)}
-                  className="px-4 py-2 bg-[#0f9d58] hover:bg-[#0b8043] text-white text-xs font-bold rounded-lg transition-colors"
+                  className="px-4 py-2 bg-[var(--app-primary)] hover:bg-[var(--app-primary-hover)] text-white text-xs font-bold rounded-lg transition-colors"
                 >
                   Close Statement
                 </button>

@@ -314,7 +314,7 @@ export default function ClaimsPage({
                 </p>
                 <button
                   onClick={onFileClaimClick}
-                  className="px-4 py-2 bg-[#of9d58] text-white text-xs font-bold rounded-xl hover:bg-[#003d70] transition-colors cursor-pointer"
+                  className="px-4 py-2 bg-[#of9d58] text-white text-xs font-bold rounded-xl hover:bg-[var(--app-accent-strong)] transition-colors cursor-pointer"
                 >
                   File a Claim Incident
                 </button>
@@ -429,7 +429,7 @@ export default function ClaimsPage({
 
 
                       {/* Claim Notes Block */}
-                      <div className="p-4 bg-[#f0f6fa] border border-blue-100 rounded-xl space-y-2">
+                      <div className="p-4 bg-[var(--app-accent-soft)] border border-blue-100 rounded-xl space-y-2">
                         <div className="flex items-center gap-1.5 text-xs font-bold text-slate-800">
                           <Clock className="w-4 h-4 text-[#of9d58]" />
                           <span>Latest Adjuster Correspondence</span>
@@ -559,7 +559,7 @@ export default function ClaimsPage({
                 </div>
 
 
-                <div className="bg-[#f0f6fa] border border-blue-100 rounded-xl p-3 flex flex-col justify-between h-[68px]">
+                <div className="bg-[var(--app-accent-soft)] border border-blue-100 rounded-xl p-3 flex flex-col justify-between h-[68px]">
                   <span className="text-[10px] font-bold text-[#of9d58] uppercase">Policy Deductible:</span>
                   <span className="text-sm font-black text-slate-800">${deductible}</span>
                 </div>
@@ -722,7 +722,7 @@ export default function ClaimsPage({
                   <div className="flex justify-end pt-2">
                     <button
                       type="submit"
-                      className="px-6 py-3 bg-[#of9d58] hover:bg-[#003d70] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer flex items-center space-x-1"
+                      className="px-6 py-3 bg-[#of9d58] hover:bg-[var(--app-accent-strong)] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer flex items-center space-x-1"
                     >
                       <span>Confirm AutoGlass Dispatch</span>
                       <ChevronRight className="w-4 h-4" />
@@ -917,7 +917,7 @@ export default function ClaimsPage({
               {!isHomeCertified && (
                 <button
                   onClick={() => handleCertifySafety('home')}
-                  className="w-full py-3 bg-[#of9d58] hover:bg-[#003c6e] text-white font-bold text-xs rounded-xl shadow-xs transition-colors cursor-pointer"
+                  className="w-full py-3 bg-[#of9d58] hover:bg-[var(--app-accent-strong)] text-white font-bold text-xs rounded-xl shadow-xs transition-colors cursor-pointer"
                 >
                   Certify Home Safety Audit & Claim $15.00 Credit
                 </button>
@@ -1041,7 +1041,7 @@ export default function ClaimsPage({
               {!isAutoCertified && (
                 <button
                   onClick={() => handleCertifySafety('auto')}
-                  className="w-full py-3 bg-[#of9d58] hover:bg-[#003c6e] text-white font-bold text-xs rounded-xl shadow-xs transition-colors cursor-pointer"
+                  className="w-full py-3 bg-[#of9d58] hover:bg-[var(--app-accent-strong)] text-white font-bold text-xs rounded-xl shadow-xs transition-colors cursor-pointer"
                 >
                   Certify Safe Driver Audit & Claim $15.00 Credit
                 </button>

@@ -235,7 +235,7 @@ export default function App() {
 
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 flex flex-col font-sans selection:bg-[#0f9d58]/20" id="portal-root">
+    <div className="min-h-screen bg-[var(--app-bg)] text-slate-800 flex flex-col font-sans selection:bg-[var(--app-primary)]/20" id="portal-root">
      
       {/* Header and Quick Navigation / Search */}
       <Header
@@ -375,7 +375,7 @@ export default function App() {
 
 
         {/* Bundle Banner */}
-        <div className="bg-[#0f9d58] text-white rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md" id="bundle-save-banner">
+        <div className="bg-[var(--app-primary)] text-white rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md" id="bundle-save-banner">
           <div className="space-y-1 text-center md:text-left">
             <h3 className="text-xl sm:text-2xl font-bold font-sans">
               Bundle and save up to 25%
@@ -386,7 +386,7 @@ export default function App() {
           </div>
           <button
             onClick={() => setIsBundleModalOpen(true)}
-            className="px-6 py-3.5 bg-white hover:bg-[#e6f0fa] border border-[#bcd3e6] rounded-xl text-[#0f9d58] font-bold text-xs sm:text-sm tracking-wide transition-all shadow-md hover:shadow-lg hover:scale-[1.02]"
+            className="px-6 py-3.5 bg-white hover:bg-[var(--app-accent-soft)] border border-[var(--app-accent-border)] rounded-xl text-[var(--app-primary)] font-bold text-xs sm:text-sm tracking-wide transition-all shadow-md hover:shadow-lg hover:scale-[1.02]"
             id="btn-learn-bundles"
           >
             Learn about bundles
@@ -396,7 +396,7 @@ export default function App() {
 
 
       {/* Footer block */}
-     <footer className="w-full bg-[#1a202c] text-slate-400 text-xs py-10 mt-16 border-t border-slate-800" id="portal-footer">
+     <footer className="w-full bg-[var(--app-ink)] text-slate-400 text-xs py-10 mt-16 border-t border-slate-800" id="portal-footer">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <div className="flex flex-col sm:flex-row items-center justify-between border-b border-slate-800 pb-6 gap-4">
             {/* Brand */}
@@ -469,7 +469,7 @@ export default function App() {
             initial={{ opacity: 0, y: 50, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-6 right-6 z-50 bg-[#1a202c] text-white text-xs py-3 px-5 rounded-xl border border-slate-800 shadow-2xl flex items-center space-x-2.5 max-w-sm"
+            className="fixed bottom-6 right-6 z-50 bg-[var(--app-ink)] text-white text-xs py-3 px-5 rounded-xl border border-slate-800 shadow-2xl flex items-center space-x-2.5 max-w-sm"
           >
             <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />
             <span className="font-sans font-medium">{toastMessage}</span>

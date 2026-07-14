@@ -32,15 +32,7 @@
     --color-emerald-600: oklch(59.6% 0.145 163.225);
     --color-emerald-700: oklch(50.8% 0.118 165.612);
     --color-emerald-800: oklch(43.2% 0.095 166.913);
-    --color-blue-50: #f8fafc;
-    --color-blue-100: #e6f4ea;
-    --color-blue-200: #d8eadf;
-    --color-blue-300: #b7dfc2;
-    --color-blue-400: #9aa0a6;
-    --color-blue-500: #5f6368;
-    --color-blue-600: #3c4043;
-    --color-blue-700: #0f9d58;
-    --color-blue-800: #0b8043;
+    /* --color-blue-* now defined in master.css */
     --color-indigo-50: oklch(96.2% 0.018 272.314);
     --color-indigo-500: oklch(58.5% 0.233 277.117);
     --color-indigo-700: oklch(45.7% 0.24 277.023);
@@ -56,28 +48,13 @@
     --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-slate-950: oklch(12.9% 0.042 264.695);
     --color-white: #fff;
-    --app-bg: #f7f9fc;
-    --app-surface: #ffffff;
-    --app-surface-muted: #f1f5f9;
-    --app-surface-tint: #e6f4ea;
-    --app-text: #172033;
-    --app-text-muted: #667085;
-    --app-text-subtle: #98a2b3;
-    --app-border: #dbe3ee;
-    --app-border-strong: #b7dfc2;
-    --app-primary: #0f9d58;
-    --app-primary-hover: #0b8043;
-    --app-primary-soft: #e6f4ea;
-    --app-accent: #0f9d8f;
-    --app-accent-soft: #e4f4f2;
-    --app-success: #12a150;
-    --app-warning: #f9ab00;
-    --app-danger: #d93025;
-    --app-ink: #101828;
+    /* --app-bg, --app-surface*, --app-text*, --app-border*, --app-primary*,
+       --app-accent*, --app-success, --app-warning, --app-danger, --app-ink
+       now defined in master.css */
     --app-radius: 0.5rem;
     --app-shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 8px 24px rgba(16, 24, 40, 0.08);
     --app-shadow-soft: 0 1px 2px rgba(16, 24, 40, 0.05);
-    --app-focus: 0 0 0 3px rgba(15, 157, 143, 0.18);
+    /* --app-focus now defined in master.css */
     --spacing: 0.25rem;
     --container-xs: 20rem;
     --container-sm: 24rem;

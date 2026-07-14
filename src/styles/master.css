@@ -1,0 +1,115 @@
+:root {
+  /* ShieldGuard theme */
+
+  /* Valuemomentum  theme: Blue Ribbon */
+      --brand-50:  #CFE2FE;
+      --brand-100: #9CC5FE;
+      --brand-200: #6AA7FD;
+      --brand-300: #6AA7FD;
+      --brand-400: #6AA7FD;
+      --brand-500: #056BFC; /* primary */
+      --brand-600: #0255CC;
+      --brand-700: #024099;
+      --brand-800: #002152;
+      --brand-900: #071933;
+    
+      /* Comma-separated RGB triplets, kept in sync manually with the hex
+         above. Needed anywhere an rgba()/opacity value is required, since
+         CSS custom properties can't be decomposed into channels automatically. */
+      --brand-500-rgb: 5, 107, 252;
+      --brand-600-rgb: 2, 85, 204;
+	   --brand-700-rgb: 2, 64, 153;
+
+  /* Accent — Blue Ribbon */
+  --accent-50:  #CFE2FE;
+  --accent-100: #9CC5FE;
+  --accent-200: #6AA7FD;
+  --accent-300: #6AA7FD;
+  --accent-400: #6AA7FD;
+  --accent-500: #056BFC; /* primary */
+  --accent-600: #0255CC;
+  --accent-700: #024099;
+  --accent-800: #002152;
+  --accent-900: #071933;
+
+  --accent-500-rgb: 5, 107, 252;
+  --accent-600-rgb: 2, 85, 204;
+  --accent-700-rgb: 2, 64, 153;
+  --accent-50-rgb:  207, 226, 254;
+
+  /* Warning — Sunset Strip */
+  --warning-50:  #FFF1C7;
+  --warning-100: #FFE594;
+  --warning-200: #FFD861;
+  --warning-500: #FABD00; /* primary */
+  --warning-600: #C79600;
+  --warning-700: #947000;
+  --warning-800: #614900;
+
+  --warning-500-rgb: 250, 189, 0;
+
+  /* Neutral — Black Cat / Alabaster */
+  --neutral-50:  #F8F8F8;
+  --neutral-100: #DFDFDF;
+  --neutral-200: #C5C5C5;
+  --neutral-300: #ABABAB;
+  --neutral-400: #B0B0B0;
+  --neutral-500: #7D7D7D;
+  --neutral-600: #636363;
+  --neutral-900: #303030; /* ink */
+
+  --neutral-50-rgb:  248, 248, 248;
+  --neutral-100-rgb: 223, 223, 223;
+  --neutral-900-rgb: 48, 48, 48;
+
+  /* Danger — not part of the supplied brand palette, kept as-is */
+  --danger-500: #D93025;
+  --danger-500-rgb: 217, 48, 37;
+
+  /* ============ Semantic app tokens ============
+     Components reference these (var(--app-primary), etc.), never the
+     raw brand/accent/warning/neutral scales directly, so intent stays
+     clear and each role can be repointed at a different scale independently. */
+
+  --app-bg:                var(--neutral-50);
+  --app-surface:           #ffffff;
+  --app-surface-muted:     var(--neutral-100);
+  --app-surface-tint:      var(--brand-50);
+
+  --app-text:              var(--neutral-900);
+  --app-text-muted:        var(--neutral-500);
+  --app-text-subtle:       var(--neutral-400);
+  --app-icon-muted:        var(--neutral-600);
+
+  --app-border:            var(--neutral-100);
+  --app-border-strong:     var(--brand-200);
+
+  --app-primary:           var(--brand-500);
+  --app-primary-hover:     var(--brand-600);
+  --app-primary-soft:      var(--brand-50);
+  --app-primary-soft-hover: var(--brand-100);
+
+  --app-accent:            var(--accent-500);
+  --app-accent-soft:       var(--accent-50);
+  --app-accent-border:     var(--accent-100);
+  --app-accent-strong:     var(--accent-800);
+
+  --app-success:           var(--brand-700);
+  --app-warning:           var(--warning-500);
+  --app-danger:            var(--danger-500);
+
+  --app-ink:               var(--neutral-900);
+
+  /* Google-scale aliases some components still reference as `blue-*` utility classes */
+  --color-blue-50:  var(--neutral-50);
+  --color-blue-100: var(--brand-50);
+  --color-blue-200: var(--brand-100);
+  --color-blue-300: var(--brand-200);
+  --color-blue-400: var(--neutral-400);
+  --color-blue-500: var(--neutral-500);
+  --color-blue-600: var(--neutral-600);
+  --color-blue-700: var(--brand-500);
+  --color-blue-800: var(--brand-600);
+
+  --app-focus: 0 0 0 3px rgba(var(--accent-500-rgb), 0.18);
+}

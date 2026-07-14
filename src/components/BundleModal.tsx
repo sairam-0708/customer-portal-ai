@@ -33,9 +33,9 @@ export default function BundleModal({ onClose, onApplyBundle, isBundleApplied }:
         className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden border border-slate-200"
         id="bundle-modal"
       >
-        <div className="flex items-center justify-between px-6 py-4 bg-[#0f9d58] text-white">
+        <div className="flex items-center justify-between px-6 py-4 bg-[var(--app-primary)] text-white">
           <div className="flex items-center space-x-2">
-            <Gift className="w-5 h-5 fill-white text-[#0f9d58]" />
+            <Gift className="w-5 h-5 fill-white text-[var(--app-primary)]" />
             <h3 className="font-sans font-semibold text-lg">ShieldGuard Bundle Planner</h3>
           </div>
           <button onClick={onClose} className="text-white/80 hover:text-white p-1">
@@ -64,7 +64,7 @@ export default function BundleModal({ onClose, onApplyBundle, isBundleApplied }:
                     <strong className="text-sm text-slate-800 block">Current Multi-Policy Discount</strong>
                     <span className="text-xs text-slate-500">Auto + Home bundled premium discount.</span>
                   </div>
-                  <span className="text-xs bg-slate-100 text-[#0f9d58] font-bold px-2.5 py-1 rounded-full border border-slate-200">
+                  <span className="text-xs bg-slate-100 text-[var(--app-primary)] font-bold px-2.5 py-1 rounded-full border border-slate-200">
                     {isBundleApplied ? '15% Active' : 'Eligible'}
                   </span>
                 </div>
@@ -74,7 +74,7 @@ export default function BundleModal({ onClose, onApplyBundle, isBundleApplied }:
                     <strong className="text-sm text-slate-800 block">Add umbrella coverage</strong>
                     <span className="text-xs text-slate-500">Get an extra 5% off across all active policies.</span>
                   </div>
-                  <button className="text-xs text-[#0f9d58] font-semibold hover:underline">
+                  <button className="text-xs text-[var(--app-primary)] font-semibold hover:underline">
                     Add +
                   </button>
                 </div>
@@ -90,7 +90,7 @@ export default function BundleModal({ onClose, onApplyBundle, isBundleApplied }:
                 </button>
                 <button
                   onClick={handleApply}
-                  className="py-2.5 px-5 bg-[#0f9d58] hover:bg-[#0b8043] text-white rounded-lg text-xs font-semibold flex items-center space-x-1"
+                  className="py-2.5 px-5 bg-[var(--app-primary)] hover:bg-[var(--app-primary-hover)] text-white rounded-lg text-xs font-semibold flex items-center space-x-1"
                 >
                   <span>{isBundleApplied ? 'Update Plan' : 'Apply Bundle'}</span>
                   <ArrowRight className="w-4 h-4" />

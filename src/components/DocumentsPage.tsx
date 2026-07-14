@@ -167,7 +167,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
     <div className="space-y-8" id="documents-vault-wrapper">
       {/* 1. Page Header */}
       <div>
-        <span className="text-xs font-bold tracking-wider text-[#0f9d58] block uppercase font-sans">Secure PDF Vault</span>
+        <span className="text-xs font-bold tracking-wider text-[var(--app-primary)] block uppercase font-sans">Secure PDF Vault</span>
         <h1 className="text-2xl sm:text-3xl font-sans font-medium text-slate-900 mt-1">ShieldGuard Documents Vault</h1>
         <p className="text-xs sm:text-sm text-slate-500 font-sans">View, print, or download electronic PDFs of policy binders and statements</p>
       </div>
@@ -179,7 +179,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
             onClick={() => setActiveFilter('all')}
             className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${
               activeFilter === 'all' 
-                ? 'bg-[#0f9d58] text-white shadow-xs' 
+                ? 'bg-[var(--app-primary)] text-white shadow-xs' 
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -189,7 +189,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
             onClick={() => setActiveFilter('policies')}
             className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${
               activeFilter === 'policies' 
-                ? 'bg-[#0f9d58] text-white shadow-xs' 
+                ? 'bg-[var(--app-primary)] text-white shadow-xs' 
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -199,7 +199,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
             onClick={() => setActiveFilter('billing')}
             className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${
               activeFilter === 'billing' 
-                ? 'bg-[#0f9d58] text-white shadow-xs' 
+                ? 'bg-[var(--app-primary)] text-white shadow-xs' 
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -209,7 +209,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
             onClick={() => setActiveFilter('claims')}
             className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${
               activeFilter === 'claims' 
-                ? 'bg-[#0f9d58] text-white shadow-xs' 
+                ? 'bg-[var(--app-primary)] text-white shadow-xs' 
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -223,7 +223,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
             placeholder="Search within file names..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full sm:w-64 pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-xs placeholder-slate-400 outline-none focus:ring-2 focus:ring-[#0f9d58] focus:border-transparent"
+            className="w-full sm:w-64 pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-xs placeholder-slate-400 outline-none focus:ring-2 focus:ring-[var(--app-primary)] focus:border-transparent"
           />
           <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
         </div>
@@ -249,7 +249,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
                 >
                   {/* File Metadata */}
                   <div className="flex items-start space-x-3.5 min-w-0">
-                    <div className="p-3 bg-slate-50 text-[#0f9d58] rounded-xl shrink-0">
+                    <div className="p-3 bg-slate-50 text-[var(--app-primary)] rounded-xl shrink-0">
                       <FileText className="w-6 h-6" />
                     </div>
                     <div className="min-w-0 space-y-0.5">
@@ -296,13 +296,13 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
                         disabled={isDownloading}
                         className={`px-3.5 py-2 text-xs font-bold rounded-lg transition-all flex items-center gap-1 ${
                           isDownloading 
-                            ? 'bg-slate-50 text-[#0f9d58] border border-slate-200 cursor-not-allowed' 
-                            : 'bg-[#0f9d58] hover:bg-[#0b8043] text-white shadow-xs'
+                            ? 'bg-slate-50 text-[var(--app-primary)] border border-slate-200 cursor-not-allowed' 
+                            : 'bg-[var(--app-primary)] hover:bg-[var(--app-primary-hover)] text-white shadow-xs'
                         }`}
                       >
                         {isDownloading ? (
                           <>
-                            <span className="w-3 h-3 border-2 border-[#0f9d58] border-t-transparent rounded-full animate-spin"></span>
+                            <span className="w-3 h-3 border-2 border-[var(--app-primary)] border-t-transparent rounded-full animate-spin"></span>
                             <span>{downloadProgress}%</span>
                           </>
                         ) : (
@@ -331,7 +331,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
               className="bg-white border border-slate-300 rounded-2xl max-w-md w-full overflow-hidden shadow-2xl relative"
             >
-              <div className="bg-[#0f9d58] text-white p-5 flex items-center justify-between">
+              <div className="bg-[var(--app-primary)] text-white p-5 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Signature className="w-5 h-5" />
                   <span className="font-bold text-xs uppercase tracking-wider">ShieldGuard electronic signing pad</span>
@@ -361,7 +361,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
                       required
                       value={signerName}
                       onChange={(e) => setSignerName(e.target.value)}
-                      className="w-full bg-white border border-slate-200 rounded-lg p-2.5 text-xs font-semibold text-slate-800 outline-none focus:ring-2 focus:ring-[#0f9d58]"
+                      className="w-full bg-white border border-slate-200 rounded-lg p-2.5 text-xs font-semibold text-slate-800 outline-none focus:ring-2 focus:ring-[var(--app-primary)]"
                     />
                   </div>
 
@@ -374,7 +374,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
                         required
                         value={signerInitials}
                         onChange={(e) => setSignerInitials(e.target.value)}
-                        className="w-full bg-white border border-slate-200 rounded-lg p-2.5 text-xs font-bold text-slate-800 text-center outline-none focus:ring-2 focus:ring-[#0f9d58]"
+                        className="w-full bg-white border border-slate-200 rounded-lg p-2.5 text-xs font-bold text-slate-800 text-center outline-none focus:ring-2 focus:ring-[var(--app-primary)]"
                       />
                     </div>
                     
@@ -385,7 +385,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
                           type="checkbox"
                           checked={drawSignature}
                           onChange={(e) => setDrawSignature(e.target.checked)}
-                          className="rounded border-slate-300 text-[#0f9d58] focus:ring-[#0f9d58]"
+                          className="rounded border-slate-300 text-[var(--app-primary)] focus:ring-[var(--app-primary)]"
                         />
                         <span>Draw signature pad</span>
                       </label>
@@ -411,8 +411,8 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
                   )}
                 </div>
 
-                <div className="p-3 bg-[#e6f4ea] border border-slate-200 rounded-xl flex gap-2 text-[10px] text-slate-600 leading-relaxed">
-                  <Lock className="w-4 h-4 text-[#0f9d58] shrink-0" />
+                <div className="p-3 bg-[var(--app-primary-soft)] border border-slate-200 rounded-xl flex gap-2 text-[10px] text-slate-600 leading-relaxed">
+                  <Lock className="w-4 h-4 text-[var(--app-primary)] shrink-0" />
                   <span>Secure electronic signatures are compliant with the federal ESIGN Act of 2000 and have standard legally binding properties.</span>
                 </div>
 
@@ -426,7 +426,7 @@ export default function DocumentsPage({ showToast }: DocumentsPageProps) {
                   </button>
                   <button
                     type="submit"
-                    className="px-4 py-2 bg-[#0f9d58] hover:bg-[#0b8043] text-white text-xs font-bold rounded-lg transition-colors"
+                    className="px-4 py-2 bg-[var(--app-primary)] hover:bg-[var(--app-primary-hover)] text-white text-xs font-bold rounded-lg transition-colors"
                   >
                     Authorize E-Signature
                   </button>

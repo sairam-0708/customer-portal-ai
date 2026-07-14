@@ -25,9 +25,9 @@ export default function DetailsModal({ policy, onClose }: DetailsModalProps) {
         id="details-modal"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 bg-[#0f9d58] text-white">
+        <div className="flex items-center justify-between px-6 py-4 bg-[var(--app-primary)] text-white">
           <div className="flex items-center space-x-2">
-            <ShieldCheck className="w-5 h-5 fill-white text-[#0f9d58]" />
+            <ShieldCheck className="w-5 h-5 fill-white text-[var(--app-primary)]" />
             <h3 className="font-sans font-semibold text-lg">Policy Coverage Details</h3>
           </div>
           <button 

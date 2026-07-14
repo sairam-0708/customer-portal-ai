@@ -41,9 +41,9 @@ export default function DocsModal({ policy, onClose }: DocsModalProps) {
         id="docs-modal"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 bg-[#0f9d58] text-white">
+        <div className="flex items-center justify-between px-6 py-4 bg-[var(--app-primary)] text-white">
           <div className="flex items-center space-x-2">
-            <FileText className="w-5 h-5 fill-white text-[#0f9d58]" />
+            <FileText className="w-5 h-5 fill-white text-[var(--app-primary)]" />
             <h3 className="font-sans font-semibold text-lg">Digital Documents Vault</h3>
           </div>
           <button 
@@ -72,7 +72,7 @@ export default function DocsModal({ policy, onClose }: DocsModalProps) {
                   id={`doc-row-${doc.id}`}
                 >
                   <div className="flex items-start space-x-3.5">
-                    <div className="p-2 bg-slate-50 text-[#0f9d58] rounded-lg shrink-0">
+                    <div className="p-2 bg-slate-50 text-[var(--app-primary)] rounded-lg shrink-0">
                       <FileText className="w-4.5 h-4.5" />
                     </div>
                     <div>

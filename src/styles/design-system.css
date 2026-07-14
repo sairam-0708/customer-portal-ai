@@ -2,7 +2,7 @@
   body {
     min-height: 100vh;
     background:
-      linear-gradient(180deg, rgba(232, 240, 254, 0.74) 0%, rgba(247, 249, 252, 0.94) 32%, var(--app-bg) 100%);
+      linear-gradient(180deg, rgba(var(--accent-50-rgb), 0.74) 0%, rgba(var(--neutral-50-rgb), 0.94) 32%, var(--app-bg) 100%);
     color: var(--app-text);
     font-family: var(--font-sans);
     font-size: 15px;
@@ -10,8 +10,8 @@
 
   #portal-root {
     background:
-      radial-gradient(circle at top left, rgba(15, 157, 143, 0.1), transparent 26rem),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(247, 249, 252, 0.95));
+      radial-gradient(circle at top left, rgba(var(--accent-500-rgb), 0.1), transparent 26rem),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(var(--neutral-50-rgb), 0.95));
     color: var(--app-text);
     letter-spacing: 0;
   }
@@ -56,7 +56,7 @@
 
   .app-subheader {
     background:
-      linear-gradient(135deg, rgba(241, 243, 244, 0.92), rgba(228, 244, 242, 0.72)),
+      linear-gradient(135deg, rgba(var(--neutral-100-rgb), 0.92), rgba(var(--accent-50-rgb), 0.72)),
       var(--app-surface);
     color: var(--app-text);
     border-bottom: 1px solid var(--app-border);
@@ -104,92 +104,92 @@
     outline: none;
   }
 
-  .bg-\[\#0f9d58\],
-  #portal-root .bg-\[\#0f9d58\] {
+  .bg-\[var\(--app-primary\)\],
+  #portal-root .bg-\[var\(--app-primary\)\] {
     background-color: var(--app-primary) !important;
   }
 
-  .hover\:bg-\[\#0b8043\]:hover,
-  #portal-root .hover\:bg-\[\#0b8043\]:hover {
+  .hover\:bg-\[var\(--app-primary-hover\)\]:hover,
+  #portal-root .hover\:bg-\[var\(--app-primary-hover\)\]:hover {
     background-color: var(--app-primary-hover) !important;
   }
 
-  .bg-\[\#0f9d58\]\/5,
-  #portal-root .bg-\[\#0f9d58\]\/5 {
-    background-color: rgba(32, 33, 36, 0.05) !important;
+  .bg-\[var\(--app-primary\)\]\/5,
+  #portal-root .bg-\[var\(--app-primary\)\]\/5 {
+    background-color: rgba(var(--brand-500-rgb), 0.05) !important;
   }
 
-  .bg-\[\#0f9d58\]\/10,
-  .hover\:bg-\[\#0f9d58\]\/10:hover,
-  #portal-root .bg-\[\#0f9d58\]\/10,
-  #portal-root .hover\:bg-\[\#0f9d58\]\/10:hover {
-    background-color: rgba(32, 33, 36, 0.1) !important;
+  .bg-\[var\(--app-primary\)\]\/10,
+  .hover\:bg-\[var\(--app-primary\)\]\/10:hover,
+  #portal-root .bg-\[var\(--app-primary\)\]\/10,
+  #portal-root .hover\:bg-\[var\(--app-primary\)\]\/10:hover {
+    background-color: rgba(var(--brand-500-rgb), 0.1) !important;
   }
 
-  .hover\:bg-\[\#0f9d58\]\/20:hover,
-  #portal-root .hover\:bg-\[\#0f9d58\]\/20:hover {
-    background-color: rgba(32, 33, 36, 0.18) !important;
+  .hover\:bg-\[var\(--app-primary\)\]\/20:hover,
+  #portal-root .hover\:bg-\[var\(--app-primary\)\]\/20:hover {
+    background-color: rgba(var(--brand-500-rgb), 0.18) !important;
   }
 
-  .bg-\[\#e6f4ea\],
-  .hover\:bg-\[\#e6f4ea\]:hover,
-  #portal-root .bg-\[\#e6f4ea\],
-  #portal-root .hover\:bg-\[\#e6f4ea\]:hover {
+  .bg-\[var\(--app-primary-soft\)\],
+  .hover\:bg-\[var\(--app-primary-soft\)\]:hover,
+  #portal-root .bg-\[var\(--app-primary-soft\)\],
+  #portal-root .hover\:bg-\[var\(--app-primary-soft\)\]:hover {
     background-color: var(--app-primary-soft) !important;
   }
 
-  .hover\:bg-\[\#d8eadf\]:hover,
-  #portal-root .hover\:bg-\[\#d8eadf\]:hover {
-    background-color: #d8eadf !important;
+  .hover\:bg-\[var\(--app-primary-soft-hover\)\]:hover,
+  #portal-root .hover\:bg-\[var\(--app-primary-soft-hover\)\]:hover {
+    background-color: var(--app-primary-soft-hover) !important;
   }
 
-  .text-\[\#0f9d58\],
-  #portal-root .text-\[\#0f9d58\] {
+  .text-\[var\(--app-primary\)\],
+  #portal-root .text-\[var\(--app-primary\)\] {
     color: var(--app-primary) !important;
   }
 
-  .border-\[\#0f9d58\],
-  #portal-root .border-\[\#0f9d58\] {
+  .border-\[var\(--app-primary\)\],
+  #portal-root .border-\[var\(--app-primary\)\] {
     border-color: var(--app-primary) !important;
   }
 
-  .border-\[\#0f9d58\]\/10,
-  #portal-root .border-\[\#0f9d58\]\/10 {
-    border-color: rgba(32, 33, 36, 0.1) !important;
+  .border-\[var\(--app-primary\)\]\/10,
+  #portal-root .border-\[var\(--app-primary\)\]\/10 {
+    border-color: rgba(var(--brand-500-rgb), 0.1) !important;
   }
 
-  .border-\[\#0f9d58\]\/30,
-  #portal-root .border-\[\#0f9d58\]\/30 {
-    border-color: rgba(32, 33, 36, 0.3) !important;
+  .border-\[var\(--app-primary\)\]\/30,
+  #portal-root .border-\[var\(--app-primary\)\]\/30 {
+    border-color: rgba(var(--brand-500-rgb), 0.3) !important;
   }
 
-  .border-\[\#b7dfc2\],
-  #portal-root .border-\[\#b7dfc2\] {
+  .border-\[var\(--app-border-strong\)\],
+  #portal-root .border-\[var\(--app-border-strong\)\] {
     border-color: var(--app-border-strong) !important;
   }
 
-  .ring-\[\#0f9d58\]\/10,
-  #portal-root .ring-\[\#0f9d58\]\/10 {
-    --tw-ring-color: rgba(32, 33, 36, 0.12) !important;
+  .ring-\[var\(--app-primary\)\]\/10,
+  #portal-root .ring-\[var\(--app-primary\)\]\/10 {
+    --tw-ring-color: rgba(var(--brand-500-rgb), 0.12) !important;
   }
 
-  .focus-within\:ring-\[\#0f9d58\]:focus-within,
-  .focus\:ring-\[\#0f9d58\]:focus,
-  #portal-root .focus-within\:ring-\[\#0f9d58\]:focus-within,
-  #portal-root .focus\:ring-\[\#0f9d58\]:focus {
+  .focus-within\:ring-\[var\(--app-primary\)\]:focus-within,
+  .focus\:ring-\[var\(--app-primary\)\]:focus,
+  #portal-root .focus-within\:ring-\[var\(--app-primary\)\]:focus-within,
+  #portal-root .focus\:ring-\[var\(--app-primary\)\]:focus {
     box-shadow: var(--app-focus) !important;
     border-color: transparent !important;
     outline: none;
   }
 
-  .accent-\[\#0f9d58\],
-  #portal-root .accent-\[\#0f9d58\] {
+  .accent-\[var\(--app-primary\)\],
+  #portal-root .accent-\[var\(--app-primary\)\] {
     accent-color: var(--app-primary) !important;
   }
 
-  .selection\:bg-\[\#0f9d58\]\/20::selection,
-  #portal-root.selection\:bg-\[\#0f9d58\]\/20::selection {
-    background-color: rgba(15, 157, 143, 0.2) !important;
+  .selection\:bg-\[var\(--app-primary\)\]\/20::selection,
+  #portal-root.selection\:bg-\[var\(--app-primary\)\]\/20::selection {
+    background-color: rgba(var(--accent-500-rgb), 0.2) !important;
   }
 
   .from-slate-50 {
@@ -197,7 +197,7 @@
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)) !important;
   }
 
-  .to-\[\#e6f4ea\] {
+  .to-\[var\(--app-primary-soft\)\] {
     --tw-gradient-to: var(--app-primary-soft) !important;
   }
 

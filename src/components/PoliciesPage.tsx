@@ -152,7 +152,7 @@ export default function PoliciesPage({
       {/* Page Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between border-b border-slate-200 pb-4 gap-4">
         <div>
-          <span className="text-xs font-bold tracking-wider text-[#0f9d58] block uppercase font-sans">ShieldGuard Coverages</span>
+          <span className="text-xs font-bold tracking-wider text-[var(--app-primary)] block uppercase font-sans">ShieldGuard Coverages</span>
           <h1 className="text-2xl sm:text-3xl font-sans font-medium text-slate-900 mt-1">My Policies & Coverages</h1>
           <p className="text-xs sm:text-sm text-slate-500 font-sans">Review limits, download ID cards, and adjust deductibles on active coverages</p>
         </div>
@@ -161,7 +161,7 @@ export default function PoliciesPage({
             setShowQuoteForm(true);
             setCalculatedQuote(null);
           }}
-          className="px-4 py-2.5 bg-[#0f9d58] hover:bg-[#0b8043] text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-all shadow-xs self-start md:self-auto"
+          className="px-4 py-2.5 bg-[var(--app-primary)] hover:bg-[var(--app-primary-hover)] text-white text-xs font-bold rounded-xl flex items-center gap-1.5 transition-all shadow-xs self-start md:self-auto"
         >
           <Plus className="w-4 h-4" />
           <span>Get a New Quote</span>
@@ -177,7 +177,7 @@ export default function PoliciesPage({
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden"
           >
-            <div className="bg-gradient-to-r from-slate-50 to-[#e6f4ea] border border-slate-200 rounded-2xl p-6 relative">
+            <div className="bg-gradient-to-r from-slate-50 to-[var(--app-primary-soft)] border border-slate-200 rounded-2xl p-6 relative">
               <button 
                 onClick={() => setShowQuoteForm(false)}
                 className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 font-bold text-sm"
@@ -185,7 +185,7 @@ export default function PoliciesPage({
                 ✕
               </button>
               <div className="flex items-center space-x-2 mb-4">
-                <Sparkles className="w-5 h-5 text-[#0f9d58]" />
+                <Sparkles className="w-5 h-5 text-[var(--app-primary)]" />
                 <h3 className="font-sans font-bold text-base text-slate-900">ShieldGuard Direct Quote Estimator</h3>
               </div>
 
@@ -246,7 +246,7 @@ export default function PoliciesPage({
 
                   <button
                     type="submit"
-                    className="w-full py-2.5 bg-[#0f9d58] hover:bg-[#0b8043] text-white font-bold text-xs rounded-lg transition-colors shadow-xs"
+                    className="w-full py-2.5 bg-[var(--app-primary)] hover:bg-[var(--app-primary-hover)] text-white font-bold text-xs rounded-lg transition-colors shadow-xs"
                   >
                     Calculate Premium
                   </button>
@@ -262,7 +262,7 @@ export default function PoliciesPage({
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="text-right">
-                      <span className="text-2xl font-bold text-[#0f9d58] block">${calculatedQuote}.00</span>
+                      <span className="text-2xl font-bold text-[var(--app-primary)] block">${calculatedQuote}.00</span>
                       <span className="text-[10px] text-slate-400 block font-sans">per month premium</span>
                     </div>
                     <button
@@ -286,7 +286,7 @@ export default function PoliciesPage({
             onClick={() => setActiveTab('all')}
             className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all ${
               activeTab === 'all' 
-                ? 'bg-[#0f9d58] text-white shadow-xs' 
+                ? 'bg-[var(--app-primary)] text-white shadow-xs' 
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -296,7 +296,7 @@ export default function PoliciesPage({
             onClick={() => setActiveTab('auto')}
             className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all ${
               activeTab === 'auto' 
-                ? 'bg-[#0f9d58] text-white shadow-xs' 
+                ? 'bg-[var(--app-primary)] text-white shadow-xs' 
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -306,7 +306,7 @@ export default function PoliciesPage({
             onClick={() => setActiveTab('home')}
             className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all ${
               activeTab === 'home' 
-                ? 'bg-[#0f9d58] text-white shadow-xs' 
+                ? 'bg-[var(--app-primary)] text-white shadow-xs' 
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -320,7 +320,7 @@ export default function PoliciesPage({
             placeholder="Search within policies..."
             value={filterQuery}
             onChange={(e) => setFilterQuery(e.target.value)}
-            className="w-full sm:w-64 pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-xs placeholder-slate-400 outline-none focus:ring-2 focus:ring-[#0f9d58] focus:border-transparent"
+            className="w-full sm:w-64 pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-xs placeholder-slate-400 outline-none focus:ring-2 focus:ring-[var(--app-primary)] focus:border-transparent"
           />
           <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
         </div>
@@ -340,7 +340,7 @@ export default function PoliciesPage({
               className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between"
             >
               {/* Card Title Banner */}
-              <div className="bg-[#0f9d58] p-5 text-white flex items-center justify-between">
+              <div className="bg-[var(--app-primary)] p-5 text-white flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="bg-white/10 p-2.5 rounded-xl">
                     {isAuto ? <Car className="w-5 h-5" /> : <HomeIcon className="w-5 h-5" />}
@@ -409,7 +409,7 @@ export default function PoliciesPage({
                       className="mt-4 pt-4 border-t border-slate-100 bg-slate-50 p-3 rounded-xl space-y-3 overflow-hidden"
                     >
                       <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700">
-                        <Sliders className="w-3.5 h-3.5 text-[#0f9d58]" />
+                        <Sliders className="w-3.5 h-3.5 text-[var(--app-primary)]" />
                         <span>Interactive Coverage & Premium Adjuster</span>
                       </div>
                       
@@ -424,7 +424,7 @@ export default function PoliciesPage({
                                 onClick={() => setSimulatedDeductible(val)}
                                 className={`flex-1 py-1.5 border rounded-lg text-xs font-bold transition-all ${
                                   simulatedDeductible === val 
-                                    ? 'bg-[#0f9d58] border-[#0f9d58] text-white shadow-xs' 
+                                    ? 'bg-[var(--app-primary)] border-[var(--app-primary)] text-white shadow-xs' 
                                     : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
                                 }`}
                               >
@@ -447,15 +447,15 @@ export default function PoliciesPage({
                             step={50000}
                             value={simulatedDwellingLimit}
                             onChange={(e) => setSimulatedDwellingLimit(parseInt(e.target.value))}
-                            className="w-full accent-[#0f9d58]"
+                            className="w-full accent-[var(--app-primary)]"
                           />
                           <p className="text-[10px] text-slate-400">Increase dwelling limits to protect against post-inflation rebuild costs.</p>
                         </div>
                       )}
 
                       <div className="flex items-center justify-between p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                        <span className="text-[10px] font-bold text-[#0f9d58] uppercase">Simulated Premium Rate</span>
-                        <span className="text-sm font-black text-[#0f9d58]">
+                        <span className="text-[10px] font-bold text-[var(--app-primary)] uppercase">Simulated Premium Rate</span>
+                        <span className="text-sm font-black text-[var(--app-primary)]">
                           ${isAuto ? simulatedAutoPremium : simulatedHomePremium}/mo
                         </span>
                       </div>
@@ -469,7 +469,7 @@ export default function PoliciesPage({
                         </button>
                         <button
                           onClick={() => handleApplyAdjustments(policy.id)}
-                          className="px-3 py-1.5 bg-[#0f9d58] text-white text-[10px] font-bold rounded-lg hover:bg-[#0b8043] transition-colors"
+                          className="px-3 py-1.5 bg-[var(--app-primary)] text-white text-[10px] font-bold rounded-lg hover:bg-[var(--app-primary-hover)] transition-colors"
                         >
                           Save Adjustments
                         </button>
@@ -519,7 +519,7 @@ export default function PoliciesPage({
                         }
                       }
                     }}
-                    className="px-3 py-1.5 bg-[#0f9d58]/10 text-[#0f9d58] hover:bg-[#0f9d58]/20 text-xs font-bold rounded-lg transition-colors"
+                    className="px-3 py-1.5 bg-[var(--app-primary)]/10 text-[var(--app-primary)] hover:bg-[var(--app-primary)]/20 text-xs font-bold rounded-lg transition-colors"
                   >
                     {isAdjusting ? 'Close Adjuster' : 'Adjust Limits'}
                   </button>

@@ -122,7 +122,7 @@ export default function ClaimModal({ policies, onClose, onSubmitClaim }: ClaimMo
                   <select
                     value={selectedPolicyId}
                     onChange={(e) => setSelectedPolicyId(e.target.value)}
-                    className="w-full border border-slate-300 rounded-lg py-2.5 px-3 bg-white text-slate-800 text-sm focus:ring-2 focus:ring-[#0f9d58] focus:border-transparent outline-none"
+                    className="w-full border border-slate-300 rounded-lg py-2.5 px-3 bg-white text-slate-800 text-sm focus:ring-2 focus:ring-[var(--app-primary)] focus:border-transparent outline-none"
                     required
                   >
                     {policies.map(p => (
@@ -141,7 +141,7 @@ export default function ClaimModal({ policies, onClose, onSubmitClaim }: ClaimMo
                       type="date"
                       value={incidentDate}
                       onChange={(e) => setIncidentDate(e.target.value)}
-                      className="w-full border border-slate-300 rounded-lg py-2 px-3 bg-white text-slate-800 text-sm focus:ring-2 focus:ring-[#0f9d58] focus:border-transparent outline-none"
+                      className="w-full border border-slate-300 rounded-lg py-2 px-3 bg-white text-slate-800 text-sm focus:ring-2 focus:ring-[var(--app-primary)] focus:border-transparent outline-none"
                       required
                     />
                   </div>
@@ -153,7 +153,7 @@ export default function ClaimModal({ policies, onClose, onSubmitClaim }: ClaimMo
                     <select
                       value={category}
                       onChange={(e) => setCategory(e.target.value)}
-                      className="w-full border border-slate-300 rounded-lg py-2.5 px-3 bg-white text-slate-800 text-sm focus:ring-2 focus:ring-[#0f9d58] focus:border-transparent outline-none"
+                      className="w-full border border-slate-300 rounded-lg py-2.5 px-3 bg-white text-slate-800 text-sm focus:ring-2 focus:ring-[var(--app-primary)] focus:border-transparent outline-none"
                     >
                       <option>Accident</option>
                       <option>Weather damage</option>
@@ -174,7 +174,7 @@ export default function ClaimModal({ policies, onClose, onSubmitClaim }: ClaimMo
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     placeholder="Briefly describe what happened, any third parties involved, or any immediate actions taken..."
-                    className="w-full border border-slate-300 rounded-lg py-2 px-3 bg-white text-slate-800 text-sm focus:ring-2 focus:ring-[#0f9d58] focus:border-transparent outline-none resize-none"
+                    className="w-full border border-slate-300 rounded-lg py-2 px-3 bg-white text-slate-800 text-sm focus:ring-2 focus:ring-[var(--app-primary)] focus:border-transparent outline-none resize-none"
                     required
                   />
                 </div>
@@ -184,7 +184,7 @@ export default function ClaimModal({ policies, onClose, onSubmitClaim }: ClaimMo
                   <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5 font-sans">
                     Estimated Damage Amount (Optional)
                   </label>
-                  <div className="relative rounded-lg border border-slate-300 flex items-center overflow-hidden focus-within:ring-2 focus-within:ring-[#0f9d58] focus-within:border-transparent">
+                  <div className="relative rounded-lg border border-slate-300 flex items-center overflow-hidden focus-within:ring-2 focus-within:ring-[var(--app-primary)] focus-within:border-transparent">
                     <span className="pl-3.5 pr-1.5 text-slate-400 font-medium">$</span>
                     <input
                       type="number"
@@ -210,7 +210,7 @@ export default function ClaimModal({ policies, onClose, onSubmitClaim }: ClaimMo
                     onClick={triggerFileSelect}
                     className={`border-2 border-dashed rounded-xl p-4 text-center cursor-pointer transition-all duration-200 ${
                       dragActive
-                        ? 'border-[#0f9d58] bg-[#e6f4ea]'
+                        ? 'border-[var(--app-primary)] bg-[var(--app-primary-soft)]'
                         : 'border-slate-300 hover:border-slate-300 hover:bg-slate-50'
                     }`}
                   >
@@ -298,7 +298,7 @@ export default function ClaimModal({ policies, onClose, onSubmitClaim }: ClaimMo
 
               <button
                 onClick={onClose}
-                className="py-3 px-6 bg-[#0f9d58] hover:bg-[#0b8043] text-white rounded-xl text-xs font-semibold transition-all shadow-md cursor-pointer inline-block"
+                className="py-3 px-6 bg-[var(--app-primary)] hover:bg-[var(--app-primary-hover)] text-white rounded-xl text-xs font-semibold transition-all shadow-md cursor-pointer inline-block"
               >
                 Go Back to Dashboard
               </button>

@@ -64,7 +64,7 @@ export default function OffersSection({ offer, onTogglePaperless, onLearnMore }:
             <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold ${
               offer.active 
                 ? 'bg-emerald-100 text-emerald-800 border border-emerald-200'
-                : 'bg-slate-100 text-[#0f9d58] border border-slate-200'
+                : 'bg-slate-100 text-[var(--app-primary)] border border-slate-200'
             }`}>
               Save ${offer.savingsYearly} / yr
             </span>
@@ -103,7 +103,7 @@ export default function OffersSection({ offer, onTogglePaperless, onLearnMore }:
             className={`flex-1 py-2 px-4 rounded-lg text-xs font-semibold text-center transition-all cursor-pointer flex items-center justify-center space-x-1 border ${
               offer.active
                 ? 'bg-emerald-600 hover:bg-emerald-700 text-white border-transparent shadow-xs'
-                : 'bg-white hover:bg-[#e6f4ea] border-slate-200 hover:border-slate-300 text-slate-700 shadow-2xs'
+                : 'bg-white hover:bg-[var(--app-primary-soft)] border-slate-200 hover:border-slate-300 text-slate-700 shadow-2xs'
             }`}
             id="btn-offer-toggle"
           >
