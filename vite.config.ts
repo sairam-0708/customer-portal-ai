@@ -16,6 +16,8 @@ export default defineConfig(({ command }) => ({
   },
 
   server: {
+    host: '0.0.0.0',
+    allowedHosts: ['customer-portal-ai.onrender.com'],
     hmr: process.env.DISABLE_HMR !== 'true',
     watch: process.env.DISABLE_HMR === 'true' ? null : {},
   },
