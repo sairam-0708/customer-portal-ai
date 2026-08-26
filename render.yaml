@@ -1,35 +1,36 @@
-# render.yaml — Render static site manifest
-# Generated from the provided configuration. Review notes below for Render-specific details.
+# render.yaml — Render blueprint for this repository
+# Updated to use Render's `services` format and match the project's Vite build output.
 
 version: 1
 
-static_sites:
+services:
   - type: static_site
     name: customer-portal-ai
     repo: https://github.com/sairam-0708/customer-portal-ai
     branch: main
-    buildCommand: ""       # no build step (matches provided buildCommand: "")
-    publishPath: "."       # publish repository root (matches staticPublishPath)
-    pullRequestPreviews:
-      enabled: true
+    env: static
+    # Vite build command from package.json
+    buildCommand: npm run build
+    # Vite outputs to `dist` by default
+    staticPublishPath: dist
+    pullRequestPreviewsEnabled: true
 
-    # Security headers from the reference. NOTE: Render's render.yaml may not apply headers
-    # for static sites directly. Recommended approach: add a `_headers` file at the publishPath
-    # (e.g., create a file named `_headers` in your repository root or in the output folder) with:
-    #
-    #   /*
-    #     X-Content-Type-Options: nosniff
-    #     Referrer-Policy: strict-origin-when-cross-origin
-    #     X-Frame-Options: SAMEORIGIN
-    #
-    # Render will serve that file's headers for static sites.
-
-    # SPA rewrite: rewrite all requests to /index.html. Render does not currently expose a
-    # `rewrites` key in render.yaml for static sites, so use a `_redirects` file (Netlify-style)
-    # or configure rewrites in your app's router. Example `_redirects` entry to put in repo root:
-    #   /*    /index.html   200
-
-    # If you need environment variables or Node build/runtime, add them here as envVars.
+    # Environment variables (optional)
     envVars:
       - key: NODE_ENV
         value: production
+
+# Notes:
+# 1) Render expects `services:` with entries having `type: static_site` for static sites.
+#    Using `static_sites:` at the top level causes the error you saw in the dashboard.
+# 2) I set buildCommand to `npm run build` and staticPublishPath to `dist` because this
+#    repository uses Vite (see package.json) which produces the production output in `dist`.
+# 3) To apply the security headers and the SPA rewrite, add these files to the repository root:
+#    _headers
+#      /*
+#        X-Content-Type-Options: nosniff
+#        Referrer-Policy: strict-origin-when-cross-origin
+#        X-Frame-Options: SAMEORIGIN
+#    _redirects
+#      /*    /index.html   200
+# If you want I can create those two files for you and/or merge this manifest into `main`.
