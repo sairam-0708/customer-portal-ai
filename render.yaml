@@ -1,0 +1,35 @@
+# render.yaml — Render static site manifest
+# Generated from the provided configuration. Review notes below for Render-specific details.
+
+version: 1
+
+static_sites:
+  - type: static_site
+    name: nova-digital-demo
+    repo: https://github.com/sairam-0708/customer-portal-ai
+    branch: main
+    buildCommand: ""       # no build step (matches provided buildCommand: "")
+    publishPath: "."       # publish repository root (matches staticPublishPath)
+    pullRequestPreviews:
+      enabled: true
+
+    # Security headers from the reference. NOTE: Render's render.yaml may not apply headers
+    # for static sites directly. Recommended approach: add a `_headers` file at the publishPath
+    # (e.g., create a file named `_headers` in your repository root or in the output folder) with:
+    #
+    #   /*
+    #     X-Content-Type-Options: nosniff
+    #     Referrer-Policy: strict-origin-when-cross-origin
+    #     X-Frame-Options: SAMEORIGIN
+    #
+    # Render will serve that file's headers for static sites.
+
+    # SPA rewrite: rewrite all requests to /index.html. Render does not currently expose a
+    # `rewrites` key in render.yaml for static sites, so use a `_redirects` file (Netlify-style)
+    # or configure rewrites in your app's router. Example `_redirects` entry to put in repo root:
+    #   /*    /index.html   200
+
+    # If you need environment variables or Node build/runtime, add them here as envVars.
+    envVars:
+      - key: NODE_ENV
+        value: production
