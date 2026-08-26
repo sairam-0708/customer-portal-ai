@@ -5,7 +5,7 @@ version: 1
 
 static_sites:
   - type: static_site
-    name: nova-digital-demo
+    name: customer-portal-ai
     repo: https://github.com/sairam-0708/customer-portal-ai
     branch: main
     buildCommand: ""       # no build step (matches provided buildCommand: "")
