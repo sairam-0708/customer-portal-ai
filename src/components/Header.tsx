@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Shield,
   Search,
@@ -59,6 +59,31 @@ export default function Header({
   const [searchQuery, setSearchQuery] = useState('');
   const [isBellOpen, setIsBellOpen] = useState(false);
 
+  const [greeting, setGreeting] = useState('Good afternoon, Alex.');
+
+  useEffect(() => {
+    const adobeTarget = (window as any).adobe?.target;
+
+    if (!adobeTarget) {
+      console.warn('Adobe Target is not loaded');
+      return;
+    }
+
+    console.log('Adobe Target loaded');
+
+    adobeTarget.getOffer({
+      mbox: 'customer-greeting',
+
+      success: function (offers: any) {
+        console.log('Adobe Target response:', offers);
+      },
+
+      error: function (status: any, error: any) {
+        console.error('Adobe Target error:', status, error);
+      }
+    });
+  }, []);
+
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
@@ -88,7 +113,7 @@ export default function Header({
         <div className="flex items-center justify-between app-header-top">
           {/* Logo & Brand */}
           <div
-             onClick={() => setCurrentTab('portfolio')}
+            onClick={() => setCurrentTab('portfolio')}
             className="cursor-pointer"
             id="brand-logo"
           >
@@ -136,7 +161,7 @@ export default function Header({
 
           {/* User Profile Info & Notifications Bell */}
           <div className="flex items-center space-x-4 relative" id="user-profile-badge">
-           
+
             {/* Notification Bell Icon */}
             <div className="relative">
               <button
@@ -160,7 +185,7 @@ export default function Header({
                   <>
                     {/* Invisible click backdrop */}
                     <div className="fixed inset-0 z-40" onClick={() => setIsBellOpen(false)} />
-                   
+
                     <motion.div
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -207,7 +232,7 @@ export default function Header({
                                 {!notif.read && (
                                   <span className="absolute left-2.5 top-4.5 w-1.5 h-1.5 bg-[var(--app-primary)] rounded-full" />
                                 )}
-                               
+
                                 {/* Severity Icon */}
                                 <div className="shrink-0 mt-0.5">
                                   {notif.type === 'warning' && (
@@ -239,7 +264,7 @@ export default function Header({
                                   <p className="text-[11px] text-slate-500 leading-relaxed font-sans pr-4">
                                     {notif.message}
                                   </p>
-                                 
+
                                   {/* Individual Mark as Read */}
                                   {!notif.read && (
                                     <button
@@ -304,7 +329,7 @@ export default function Header({
             className="text-3xl sm:text-4xl font-sans font-medium tracking-tight text-slate-900"
             id="greeting-heading"
           >
-            Good afternoon, Alex.
+            {greeting}
           </motion.h1>
           <p className="text-sm text-slate-500 mt-1 font-sans">
             How can we help you today?
@@ -328,7 +353,7 @@ export default function Header({
                 <Search className="w-4 h-4 text-slate-600" />
               </button>
             </div>
-           
+
             {/* Search filter results feedback */}
             <AnimatePresence>
               {searchQuery && (
