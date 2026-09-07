@@ -75,8 +75,9 @@ export default function Header({
       mbox: 'customer-greeting',
 
       success: function (offers: any) {
-        console.log('Adobe Target response:', offers);
-      },
+  console.log('Adobe Target response:', offers);
+  console.log('Adobe Target response JSON:', JSON.stringify(offers, null, 2));
+},
 
       error: function (status: any, error: any) {
         console.error('Adobe Target error:', status, error);
