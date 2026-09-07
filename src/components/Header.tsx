@@ -76,7 +76,13 @@ export default function Header({
 
       success: function (offers: any) {
   console.log('Adobe Target response:', offers);
-  console.log('Adobe Target response JSON:', JSON.stringify(offers, null, 2));
+
+  const greetingText =
+    offers?.[0]?.content?.[0]?.data?.customerGreetingByPath?.item?.greetingText;
+
+  if (greetingText) {
+    setGreeting(greetingText);
+  }
 },
 
       error: function (status: any, error: any) {
